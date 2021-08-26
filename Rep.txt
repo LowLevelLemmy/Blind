@@ -1,0 +1,5 @@
+Thanks to Joey Carlino: https://www.youtube.com/watch?v=9R_JBq3Hm6E
+
+I copied that tutorial to implement my shader. Theres few differences between his Blender shader and my ShaderGraph™ shader.
+
+I also used his sprite sheets found on gum road.
