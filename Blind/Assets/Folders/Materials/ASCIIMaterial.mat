@@ -45,9 +45,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Contrast: 1
+    - Contrast: 0
     - Height: 1080
-    - Res: 30
+    - Res: 50
     - SpriteSheetCount: 6
     - TEMP: 1.77
     - Width: 1920
