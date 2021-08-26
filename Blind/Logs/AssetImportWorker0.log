@@ -465,3 +465,832 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 640.103209 seconds.
+  path: Assets/Snap.shadersubgraph
+  artifactKey: Guid(e6fdb882976f8f247b7a92c5e87e40f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Snap.shadersubgraph using Guid(e6fdb882976f8f247b7a92c5e87e40f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '493d80646405c03705479091aa9d245e') in 0.024974 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 172.557615 seconds.
+  path: Assets/Snap.shadersubgraph
+  artifactKey: Guid(e6fdb882976f8f247b7a92c5e87e40f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Snap.shadersubgraph using Guid(e6fdb882976f8f247b7a92c5e87e40f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d88149a8fa67afef2f6d1fd95ce233f') in 0.002723 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 732.190352 seconds.
+  path: Assets/Snap.shadersubgraph
+  artifactKey: Guid(e6fdb882976f8f247b7a92c5e87e40f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Snap.shadersubgraph using Guid(e6fdb882976f8f247b7a92c5e87e40f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd808cabdaf5a55134de76e96ca99361') in 0.002340 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 52.199416 seconds.
+  path: Assets/Snap.shadersubgraph
+  artifactKey: Guid(e6fdb882976f8f247b7a92c5e87e40f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Snap.shadersubgraph using Guid(e6fdb882976f8f247b7a92c5e87e40f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a7c9bb4355863f82465abf1dd49a495') in 0.002779 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.590630 seconds.
+  path: Assets/Snap.shadersubgraph
+  artifactKey: Guid(e6fdb882976f8f247b7a92c5e87e40f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Snap.shadersubgraph using Guid(e6fdb882976f8f247b7a92c5e87e40f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f3e08f36352f36ca46af949056dcf83') in 0.002263 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.703577 seconds.
+  path: Assets/Folders/Materials/ASCIIShader.shadergraph
+  artifactKey: Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/ASCIIShader.shadergraph using Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fb8cb1ae05749393ea2266d3be05e86') in 0.005716 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2164.945661 seconds.
+  path: Assets/Folders/Materials/Snap.shadersubgraph
+  artifactKey: Guid(e6fdb882976f8f247b7a92c5e87e40f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/Snap.shadersubgraph using Guid(e6fdb882976f8f247b7a92c5e87e40f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b9283d8e69cf3b754ef2c31989cf171') in 0.003193 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.204554 seconds.
+  path: Assets/Folders/Materials/Snap.shadersubgraph
+  artifactKey: Guid(e6fdb882976f8f247b7a92c5e87e40f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/Snap.shadersubgraph using Guid(e6fdb882976f8f247b7a92c5e87e40f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bec6bf07b8ab2b13f67b0e670c4b01d') in 0.002486 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 455.753962 seconds.
+  path: Assets/Folders/Materials/Snap.shadersubgraph
+  artifactKey: Guid(e6fdb882976f8f247b7a92c5e87e40f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/Snap.shadersubgraph using Guid(e6fdb882976f8f247b7a92c5e87e40f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aab8a2a8c3568e5a38da1d37eae06065') in 0.003127 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.788280 seconds.
+  path: Assets/Folders/Materials/Snap.shadersubgraph
+  artifactKey: Guid(e6fdb882976f8f247b7a92c5e87e40f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/Snap.shadersubgraph using Guid(e6fdb882976f8f247b7a92c5e87e40f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0778e2707426037a3e3b1fca4561a304') in 0.002134 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1280.455896 seconds.
+  path: Assets/Folders/Materials/ASCIIShader.shadergraph
+  artifactKey: Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/ASCIIShader.shadergraph using Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3044853a8424a1b8d21ed933a78e5b31') in 0.003102 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.057368 seconds.
+  path: Assets/Folders/Materials/ASCIIShader.shadergraph
+  artifactKey: Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/ASCIIShader.shadergraph using Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d9204edf9baa89a2526c1ccf7c52fb8') in 0.001877 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.465942 seconds.
+  path: Assets/Folders/Materials/ASCIIShader.shadergraph
+  artifactKey: Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/ASCIIShader.shadergraph using Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ee63917ec0a7c8cf91670850c0a6cbf') in 0.002086 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 189.281951 seconds.
+  path: Assets/Folders/Materials/ASCIIShader.shadergraph
+  artifactKey: Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/ASCIIShader.shadergraph using Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a97678a1b88862b8afe57a52162e5cf') in 0.002357 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.307450 seconds.
+  path: Assets/Folders/Materials/ASCIIShader.shadergraph
+  artifactKey: Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/ASCIIShader.shadergraph using Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85645cc00321c1c1974aece9866ccdc2') in 0.002133 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 244.499496 seconds.
+  path: Assets/Folders/Materials/ASCIIShader.shadergraph
+  artifactKey: Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/ASCIIShader.shadergraph using Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a16dc2fe6295bdc34c460a239ff5426') in 0.002498 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 156.497575 seconds.
+  path: Assets/Folders/Materials/ASCIIShader.shadergraph
+  artifactKey: Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/ASCIIShader.shadergraph using Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50c6d3b74e9c5256c75c94f2f7b1f90f') in 0.002696 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.575646 seconds.
+  path: Assets/Folders/Materials/ASCIIShader.shadergraph
+  artifactKey: Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/ASCIIShader.shadergraph using Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6e867384c42e961ec13837de5e41871') in 0.002138 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 392.259698 seconds.
+  path: Assets/Folders/Materials/ASCIIMaterial.mat
+  artifactKey: Guid(4bb8f99ee82233647978e32821b557b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/ASCIIMaterial.mat using Guid(4bb8f99ee82233647978e32821b557b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72bb04cff45de9c95d2ad8686fbe53af') in 0.603826 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1357.299083 seconds.
+  path: Assets/Folders/ShaderImgs/0.png
+  artifactKey: Guid(1794287c46d83ff4d99e236e02c54d24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/0.png using Guid(1794287c46d83ff4d99e236e02c54d24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a40a4fb467e8b1374026437a7c2efafc') in 0.038916 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000258 seconds.
+  path: Assets/Folders/ShaderImgs/8.png
+  artifactKey: Guid(3d40da78551d510428ad4d3d5374796c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/8.png using Guid(3d40da78551d510428ad4d3d5374796c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6b42a741f3280928474bcc159ffe446') in 0.010719 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Assets/Folders/ShaderImgs/2.png
+  artifactKey: Guid(31c27cf6651313649b088d9e681c20fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/2.png using Guid(31c27cf6651313649b088d9e681c20fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54fdcfc6d251bab394b46db491843359') in 0.009957 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/Folders/ShaderImgs/1.png
+  artifactKey: Guid(49bf6bb36b8d80c469d6e51c3b70d547) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/1.png using Guid(49bf6bb36b8d80c469d6e51c3b70d547) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2131d2e64413d31d0e87c1152e75f15') in 0.010110 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/Folders/ShaderImgs/7.png
+  artifactKey: Guid(cb82080639c46bc439536d0efb3ceb95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/7.png using Guid(cb82080639c46bc439536d0efb3ceb95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f810b3970ecadbfb35b1328832964ed') in 0.010202 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/Folders/ShaderImgs/4.png
+  artifactKey: Guid(1341654154b500c4c9d2847e6b7468e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/4.png using Guid(1341654154b500c4c9d2847e6b7468e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da3bc8aa3befb18de0ca7f5f62845af4') in 0.010645 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000259 seconds.
+  path: Assets/Folders/ShaderImgs/3.png
+  artifactKey: Guid(24b61878d4975dd4384f5fbe3f303fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/3.png using Guid(24b61878d4975dd4384f5fbe3f303fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfb78cde44ced7e08acd54ba37cf6795') in 0.010306 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/Folders/ShaderImgs/5.png
+  artifactKey: Guid(0d4c8449fd684b848b9b57ff832c9d09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/5.png using Guid(0d4c8449fd684b848b9b57ff832c9d09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ec316f69dada0d72ff07ff5cf4148ad') in 0.010416 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/Folders/ShaderImgs/6.png
+  artifactKey: Guid(4276776b6059324419e61ddda54f02d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/6.png using Guid(4276776b6059324419e61ddda54f02d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ced17452ccc166c548804c1158cdac2') in 0.010655 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/Folders/ShaderImgs/ASCIISpriteSheet.png
+  artifactKey: Guid(32cb9bfd48a86ac4cbec268af537089c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/ASCIISpriteSheet.png using Guid(32cb9bfd48a86ac4cbec268af537089c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '286b2c90cb3c69bd4485924b0faeb474') in 0.009100 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.731391 seconds.
+  path: Assets/Folders/ShaderImgs/ASCIISpriteSheet.png
+  artifactKey: Guid(32cb9bfd48a86ac4cbec268af537089c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/ASCIISpriteSheet.png using Guid(32cb9bfd48a86ac4cbec268af537089c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17ef6b5da3cc99813d9e9880c9ff9d39') in 0.024519 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.489646 seconds.
+  path: Assets/Folders/ShaderImgs/ASCIISpriteSheet.png
+  artifactKey: Guid(32cb9bfd48a86ac4cbec268af537089c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/ASCIISpriteSheet.png using Guid(32cb9bfd48a86ac4cbec268af537089c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c11d96a563a2279881dbd629f6b295d') in 0.009350 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 103.889476 seconds.
+  path: Assets/Folders/Materials/ASCIIMaterial.mat
+  artifactKey: Guid(4bb8f99ee82233647978e32821b557b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/ASCIIMaterial.mat using Guid(4bb8f99ee82233647978e32821b557b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13afbf728afdf865e6e303fbfa822efc') in 0.008624 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1020.675809 seconds.
+  path: Assets/Folders/Materials/ASCIIMaterial.mat
+  artifactKey: Guid(4bb8f99ee82233647978e32821b557b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/ASCIIMaterial.mat using Guid(4bb8f99ee82233647978e32821b557b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf82cad6638ff50e15751c7210b55cb1') in 0.009736 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/Folders/Materials/Skybox.mat
+  artifactKey: Guid(4f123fb2ae85b864fa9bf1426263231c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/Skybox.mat using Guid(4f123fb2ae85b864fa9bf1426263231c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc804bd54c1c2a93c814a01e3efc033c') in 0.025740 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.945146 seconds.
+  path: Assets/Folders/Materials/Skybox.mat
+  artifactKey: Guid(4f123fb2ae85b864fa9bf1426263231c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/Skybox.mat using Guid(4f123fb2ae85b864fa9bf1426263231c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e6580d0adeb3786ab74bcc83decb544') in 0.014033 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 251.053600 seconds.
+  path: Assets/Folders/Materials/Snap.shadersubgraph
+  artifactKey: Guid(e6fdb882976f8f247b7a92c5e87e40f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/Snap.shadersubgraph using Guid(e6fdb882976f8f247b7a92c5e87e40f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1fd985ecfa61e1a688a4dca4d02a16d') in 0.006941 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 329.204188 seconds.
+  path: Assets/Folders/ShaderImgs/ascii_10.png
+  artifactKey: Guid(f46751d893d90b34d91f6c4870886a22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/ascii_10.png using Guid(f46751d893d90b34d91f6c4870886a22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c1f98c15497de44b35298de4e4c0cdf') in 0.011856 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000221 seconds.
+  path: Assets/Folders/ShaderImgs/ascii_94.png
+  artifactKey: Guid(1258efb010b3dc94d8d1ed1c87ea280f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/ascii_94.png using Guid(1258efb010b3dc94d8d1ed1c87ea280f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60b8d6f01adfba62731339ab7415ac26') in 0.009166 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000262 seconds.
+  path: Assets/Folders/ShaderImgs/ascii_95.png
+  artifactKey: Guid(57f6a837a8168364bbd11b8f8fa1b320) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/ascii_95.png using Guid(57f6a837a8168364bbd11b8f8fa1b320) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22ea44910d434b77b72d7a2ddb8d75b8') in 0.007858 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/Folders/ShaderImgs/ascii_93.png
+  artifactKey: Guid(ea561b72800825347a62e663a096130f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/ascii_93.png using Guid(ea561b72800825347a62e663a096130f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2334c123b3c93448afbe43a39113500') in 0.007996 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/Folders/ShaderImgs/tile_5.png
+  artifactKey: Guid(cf9ad4e14e3b6bc43a807252cd569a07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/tile_5.png using Guid(cf9ad4e14e3b6bc43a807252cd569a07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '278af6cfca5492a5cf2ab016c080cf9f') in 0.010096 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/Folders/ShaderImgs/square_10.png
+  artifactKey: Guid(b1454a8da08ec38468b75da78eb11a95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/square_10.png using Guid(b1454a8da08ec38468b75da78eb11a95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '321067caf4bf4089604dc655e16890e0') in 0.008488 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.379378 seconds.
+  path: Assets/Folders/ShaderImgs/ascii_10.png
+  artifactKey: Guid(f46751d893d90b34d91f6c4870886a22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/ascii_10.png using Guid(f46751d893d90b34d91f6c4870886a22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82e94460b3dc322c56b005abe8409736') in 0.007025 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000285 seconds.
+  path: Assets/Folders/ShaderImgs/ascii_94.png
+  artifactKey: Guid(1258efb010b3dc94d8d1ed1c87ea280f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/ascii_94.png using Guid(1258efb010b3dc94d8d1ed1c87ea280f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5e74de23e3dc7228244f11b2b543dca') in 0.009272 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/Folders/ShaderImgs/ascii_95.png
+  artifactKey: Guid(57f6a837a8168364bbd11b8f8fa1b320) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/ascii_95.png using Guid(57f6a837a8168364bbd11b8f8fa1b320) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59dc90f62a0890e0ba441b4ad2bc40d5') in 0.008052 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/Folders/ShaderImgs/ascii_93.png
+  artifactKey: Guid(ea561b72800825347a62e663a096130f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/ascii_93.png using Guid(ea561b72800825347a62e663a096130f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a7ded7e07be1d1a02c10ac6f4c86666') in 0.007730 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/Folders/ShaderImgs/tile_5.png
+  artifactKey: Guid(cf9ad4e14e3b6bc43a807252cd569a07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/tile_5.png using Guid(cf9ad4e14e3b6bc43a807252cd569a07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cac6b98eda6c0b0bdfc8b8f8b6907e2e') in 0.005713 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000143 seconds.
+  path: Assets/Folders/ShaderImgs/square_10.png
+  artifactKey: Guid(b1454a8da08ec38468b75da78eb11a95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/square_10.png using Guid(b1454a8da08ec38468b75da78eb11a95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42798878fb0cd2bd88a3b414df0c35b8') in 0.007530 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/Folders/ShaderImgs/ASCIISpriteSheet.png
+  artifactKey: Guid(32cb9bfd48a86ac4cbec268af537089c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/ASCIISpriteSheet.png using Guid(32cb9bfd48a86ac4cbec268af537089c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19755e23806efc776f50514e72cebf37') in 0.012625 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.940616 seconds.
+  path: Assets/Folders/ShaderImgs/ascii_10.png
+  artifactKey: Guid(f46751d893d90b34d91f6c4870886a22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/ascii_10.png using Guid(f46751d893d90b34d91f6c4870886a22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e171e051dcc5f309ae5a1cd64a13c02d') in 0.008553 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.631184 seconds.
+  path: Assets/Folders/ShaderImgs/0.png
+  artifactKey: Guid(1794287c46d83ff4d99e236e02c54d24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/0.png using Guid(1794287c46d83ff4d99e236e02c54d24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3ebaee1524bad24439ed78fab16833c') in 0.009259 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/Folders/ShaderImgs/8.png
+  artifactKey: Guid(3d40da78551d510428ad4d3d5374796c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/8.png using Guid(3d40da78551d510428ad4d3d5374796c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba93c7425019280627145332d8faa72a') in 0.009544 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/Folders/ShaderImgs/ascii_94.png
+  artifactKey: Guid(1258efb010b3dc94d8d1ed1c87ea280f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/ascii_94.png using Guid(1258efb010b3dc94d8d1ed1c87ea280f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dff3bf330836668928deb05aac3c1106') in 0.010931 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/Folders/ShaderImgs/ascii_95.png
+  artifactKey: Guid(57f6a837a8168364bbd11b8f8fa1b320) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/ascii_95.png using Guid(57f6a837a8168364bbd11b8f8fa1b320) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98ddbb24bb94dcae6fbbb98cd210ec50') in 0.010241 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/Folders/ShaderImgs/ascii_10.png
+  artifactKey: Guid(f46751d893d90b34d91f6c4870886a22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/ascii_10.png using Guid(f46751d893d90b34d91f6c4870886a22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08888e6bdc8cec366520b0a0522a46d9') in 0.009152 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/Folders/ShaderImgs/ascii_93.png
+  artifactKey: Guid(ea561b72800825347a62e663a096130f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/ascii_93.png using Guid(ea561b72800825347a62e663a096130f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c7e0c5a4f3c09c8fa760000144a7d2e') in 0.008647 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000245 seconds.
+  path: Assets/Folders/ShaderImgs/tile_5.png
+  artifactKey: Guid(cf9ad4e14e3b6bc43a807252cd569a07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/tile_5.png using Guid(cf9ad4e14e3b6bc43a807252cd569a07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08f2ef7124b45775ee73d1061219d34b') in 0.011749 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000166 seconds.
+  path: Assets/Folders/ShaderImgs/square_10.png
+  artifactKey: Guid(b1454a8da08ec38468b75da78eb11a95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/square_10.png using Guid(b1454a8da08ec38468b75da78eb11a95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b7121a4834bb0af87f689ba7b088366') in 0.010139 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/Folders/ShaderImgs/2.png
+  artifactKey: Guid(31c27cf6651313649b088d9e681c20fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/2.png using Guid(31c27cf6651313649b088d9e681c20fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0e6d89c2d1d47caf6206e2c034805bf') in 0.009668 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000272 seconds.
+  path: Assets/Folders/ShaderImgs/1.png
+  artifactKey: Guid(49bf6bb36b8d80c469d6e51c3b70d547) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/1.png using Guid(49bf6bb36b8d80c469d6e51c3b70d547) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45fc1b9112b49e29025e03852ec0792b') in 0.008987 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/Folders/ShaderImgs/7.png
+  artifactKey: Guid(cb82080639c46bc439536d0efb3ceb95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/7.png using Guid(cb82080639c46bc439536d0efb3ceb95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd20fbded7fa2e72b2379b5830947a8c6') in 0.009125 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/Folders/ShaderImgs/4.png
+  artifactKey: Guid(1341654154b500c4c9d2847e6b7468e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/4.png using Guid(1341654154b500c4c9d2847e6b7468e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd58b8bf7415a8d67fa4244f436e4c602') in 0.008882 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/Folders/ShaderImgs/3.png
+  artifactKey: Guid(24b61878d4975dd4384f5fbe3f303fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/3.png using Guid(24b61878d4975dd4384f5fbe3f303fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bec0646216eb2bcdf13df91f4820f1a9') in 0.008499 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/Folders/ShaderImgs/5.png
+  artifactKey: Guid(0d4c8449fd684b848b9b57ff832c9d09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/5.png using Guid(0d4c8449fd684b848b9b57ff832c9d09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a1201eaeb8a3abb34ca89e80f98999c') in 0.010044 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/Folders/ShaderImgs/6.png
+  artifactKey: Guid(4276776b6059324419e61ddda54f02d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/6.png using Guid(4276776b6059324419e61ddda54f02d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7e6d7a5ea2f3aed732d93a00711aa04') in 0.010079 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 68.134694 seconds.
+  path: Assets/Folders/Materials/ASCIIShader.shadergraph
+  artifactKey: Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/ASCIIShader.shadergraph using Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1249655ea27467d36e35dae87a103cb') in 0.006429 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 40.848998 seconds.
+  path: Assets/Folders/Materials/ASCIIShader.shadergraph
+  artifactKey: Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/ASCIIShader.shadergraph using Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25b6792691f400da4af181db4b344d0e') in 0.001798 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 37.996340 seconds.
+  path: Assets/Folders/ShaderImgs
+  artifactKey: Guid(793cc739e39cda74a9d7f525c5c76860) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs using Guid(793cc739e39cda74a9d7f525c5c76860) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40d472e8b77adc2b3bd7d2a23d70dece') in 0.006729 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 290.188529 seconds.
+  path: Assets/Folders/Materials/ASCIIMaterial.mat
+  artifactKey: Guid(4bb8f99ee82233647978e32821b557b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/ASCIIMaterial.mat using Guid(4bb8f99ee82233647978e32821b557b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a12436e2a74f3137b6afce1344ad8d6d') in 0.012735 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 542.444232 seconds.
+  path: Assets/Folders/ShaderImgs/Brail.png
+  artifactKey: Guid(8082edc48d4c4384da5eb5f71ee34fdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/Brail.png using Guid(8082edc48d4c4384da5eb5f71ee34fdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da175c06dc8b4bbf60d7c0f5174db9f0') in 0.009655 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/Folders/ShaderImgs/brailSheet.png
+  artifactKey: Guid(844beb3fafec8124d984a4158d1efdc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/brailSheet.png using Guid(844beb3fafec8124d984a4158d1efdc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54d0e54fd88fa54f7f1829df567d11f0') in 0.010019 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.370249 seconds.
+  path: Assets/Folders/ShaderImgs/brailSheet.png
+  artifactKey: Guid(844beb3fafec8124d984a4158d1efdc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/brailSheet.png using Guid(844beb3fafec8124d984a4158d1efdc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aadf10bcbc652109dc7b997e8c7ce5af') in 0.011142 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.648439 seconds.
+  path: Assets/Folders/ShaderImgs/brailSheet.png
+  artifactKey: Guid(844beb3fafec8124d984a4158d1efdc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/brailSheet.png using Guid(844beb3fafec8124d984a4158d1efdc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84b1247ecc0fa9c31ecc13a4b50f96df') in 0.010167 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 177.005256 seconds.
+  path: Assets/Folders/Materials/ASCIIMaterial.mat
+  artifactKey: Guid(4bb8f99ee82233647978e32821b557b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/ASCIIMaterial.mat using Guid(4bb8f99ee82233647978e32821b557b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81c3a9d98bdddcfbb3291df9015004f0') in 0.007995 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 78.238889 seconds.
+  path: Assets/Folders/ShaderImgs/BrailSheetInverted.png
+  artifactKey: Guid(e9c9591d455f75b42a3c58b9952e0c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/BrailSheetInverted.png using Guid(e9c9591d455f75b42a3c58b9952e0c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f81f5a7212b6682d53156bec8923d6b9') in 0.008736 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 31.320329 seconds.
+  path: Assets/Folders/ShaderImgs/BrailSheetInverted.png
+  artifactKey: Guid(e9c9591d455f75b42a3c58b9952e0c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/BrailSheetInverted.png using Guid(e9c9591d455f75b42a3c58b9952e0c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fdf8943cce6920bd3f7c0c2769c469a') in 0.011586 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.995422 seconds.
+  path: Assets/Folders/ShaderImgs/BrailSheetInverted.png
+  artifactKey: Guid(e9c9591d455f75b42a3c58b9952e0c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/BrailSheetInverted.png using Guid(e9c9591d455f75b42a3c58b9952e0c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60e1f83dce4afe4677b7d22974ed015d') in 0.008993 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2341.509343 seconds.
+  path: Assets/Folders/Materials/ASCIIMaterial.mat
+  artifactKey: Guid(4bb8f99ee82233647978e32821b557b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/ASCIIMaterial.mat using Guid(4bb8f99ee82233647978e32821b557b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0b30e31640843d5344837c71c3ed58e') in 0.015789 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 34.025063 seconds.
+  path: Assets/Folders/Materials/BrailShader.shadergraph
+  artifactKey: Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailShader.shadergraph using Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecde4addaffc951e145a58f826abe053') in 0.010277 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.403000 seconds.
+  path: Assets/Folders/Materials/BrailMat.mat
+  artifactKey: Guid(8d9f1f7d16b878943bdb6d1c2f637cfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailMat.mat using Guid(8d9f1f7d16b878943bdb6d1c2f637cfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a19ee1d737947c6f4e7eb1ba1a2f7e9') in 0.019028 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 18.260321 seconds.
+  path: Assets/UniversalRenderPipelineAsset_Renderer.asset
+  artifactKey: Guid(fd9251d923ab1f743a0b181473bccd18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniversalRenderPipelineAsset_Renderer.asset using Guid(fd9251d923ab1f743a0b181473bccd18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '776b8c8e24f77eb5a5b8a82f675ee30a') in 0.015019 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 265.843572 seconds.
+  path: Assets/Folders/Materials/BrailShader.shadergraph
+  artifactKey: Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailShader.shadergraph using Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8d45f792d28a60494a910cce3271942') in 0.002828 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.326475 seconds.
+  path: Assets/Folders/Materials/BrailShader.shadergraph
+  artifactKey: Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailShader.shadergraph using Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfdf1260e4809c7dacee19e9c74379d5') in 0.002688 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 127.128085 seconds.
+  path: Assets/Folders/Materials/BrailShader.shadergraph
+  artifactKey: Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailShader.shadergraph using Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c9aad8c392134bef8c1c820ab04f849') in 0.003130 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 41.782449 seconds.
+  path: Assets/Folders/Materials/BrailShader.shadergraph
+  artifactKey: Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailShader.shadergraph using Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e096ec3101b1e0f737ed3fc15e36c349') in 0.002825 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 247.960564 seconds.
+  path: Assets/Folders/ShaderImgs/SingleBrail.png
+  artifactKey: Guid(f2ff4528a37264e4681fb782cb83437d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/SingleBrail.png using Guid(f2ff4528a37264e4681fb782cb83437d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9dda6364540069723bfb68724399387') in 0.017890 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.164094 seconds.
+  path: Assets/Folders/ShaderImgs/SingleBrail.png
+  artifactKey: Guid(f2ff4528a37264e4681fb782cb83437d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/SingleBrail.png using Guid(f2ff4528a37264e4681fb782cb83437d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2c4dc0a22597bbe09dfe88990b6fd88') in 0.012953 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 38.710856 seconds.
+  path: Assets/Folders/Materials/BrailMat.mat
+  artifactKey: Guid(8d9f1f7d16b878943bdb6d1c2f637cfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailMat.mat using Guid(8d9f1f7d16b878943bdb6d1c2f637cfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bf55504b3260b54905d2bd16fc899ca') in 0.013092 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 50.070390 seconds.
+  path: Assets/Folders/ShaderImgs/BrailWhite.png
+  artifactKey: Guid(2d35ed4c88d0fa04a808fa49a439c0a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/BrailWhite.png using Guid(2d35ed4c88d0fa04a808fa49a439c0a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6357ef571cc1fb4c1e190465dd83d5f8') in 0.009217 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.768333 seconds.
+  path: Assets/Folders/ShaderImgs/BrailWhite.png
+  artifactKey: Guid(2d35ed4c88d0fa04a808fa49a439c0a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/BrailWhite.png using Guid(2d35ed4c88d0fa04a808fa49a439c0a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1816da401968b69193e3aec60b7efcf') in 0.012111 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.874446 seconds.
+  path: Assets/Folders/Materials/BrailShader.shadergraph
+  artifactKey: Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailShader.shadergraph using Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ca8e7a48a95c0b63d7bd1fddefc0645') in 0.002827 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 37.804582 seconds.
+  path: Assets/Folders/Materials/BrailShader.shadergraph
+  artifactKey: Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailShader.shadergraph using Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e285ab215f69157c10cb9da4138a750') in 0.002478 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 38.026635 seconds.
+  path: Assets/Folders/Materials/BrailShader.shadergraph
+  artifactKey: Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailShader.shadergraph using Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87cdaa98e6aa74c64efe5afc96fa3256') in 0.002740 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 34.621449 seconds.
+  path: Assets/Folders/ShaderImgs/SingleBrail.png
+  artifactKey: Guid(f2ff4528a37264e4681fb782cb83437d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/SingleBrail.png using Guid(f2ff4528a37264e4681fb782cb83437d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adc42fd921baaa12abcd0bb2ff07a0ab') in 0.013544 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.631907 seconds.
+  path: Assets/Folders/ShaderImgs/BrailWhite.png
+  artifactKey: Guid(2d35ed4c88d0fa04a808fa49a439c0a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/BrailWhite.png using Guid(2d35ed4c88d0fa04a808fa49a439c0a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0534e25d949fbbae4cbcc041c62e62a1') in 0.007907 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 54.528864 seconds.
+  path: Assets/Folders/Materials/BrailShader.shadergraph
+  artifactKey: Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailShader.shadergraph using Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b73ab8cfca54822392bb08eb1f46c0a') in 0.002844 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 547.528928 seconds.
+  path: Assets/Folders/Materials/BrailMat.mat
+  artifactKey: Guid(8d9f1f7d16b878943bdb6d1c2f637cfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailMat.mat using Guid(8d9f1f7d16b878943bdb6d1c2f637cfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72825c0916b9e4465e147f3c8e59f662') in 0.175438 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 436.003660 seconds.
+  path: Assets/Folders/Materials/BrailShader.shadergraph
+  artifactKey: Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailShader.shadergraph using Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c2cb17d64d53556552d102a16f53d14') in 0.003903 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.688799 seconds.
+  path: Assets/Folders/Materials/BrailShader.shadergraph
+  artifactKey: Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailShader.shadergraph using Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32f7f1f493e720cf3c12c0bc2a51f43f') in 0.002838 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 37.980062 seconds.
+  path: Assets/Folders/Materials/BrailMat.mat
+  artifactKey: Guid(8d9f1f7d16b878943bdb6d1c2f637cfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailMat.mat using Guid(8d9f1f7d16b878943bdb6d1c2f637cfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bea7caccdb6e464dae9f6a48b386b027') in 0.014540 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 136.509522 seconds.
+  path: Assets/Folders/Materials/BrailMat.mat
+  artifactKey: Guid(8d9f1f7d16b878943bdb6d1c2f637cfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailMat.mat using Guid(8d9f1f7d16b878943bdb6d1c2f637cfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37a913f71a84789a66ee278d153227a9') in 0.014003 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6309.802508 seconds.
+  path: Assets/Folders/ShaderImgs/4Brail.png
+  artifactKey: Guid(42184c7c65c015e428e51ac5b1b38238) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/4Brail.png using Guid(42184c7c65c015e428e51ac5b1b38238) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5651890715cb3b4b5bb47118f718f4b9') in 0.072556 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.067806 seconds.
+  path: Assets/Folders/ShaderImgs/4Brail.png
+  artifactKey: Guid(42184c7c65c015e428e51ac5b1b38238) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/4Brail.png using Guid(42184c7c65c015e428e51ac5b1b38238) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6efb2066158ac9216b28293ce5e08d37') in 0.014278 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.500474 seconds.
+  path: Assets/Folders/ShaderImgs/4Brail.png
+  artifactKey: Guid(42184c7c65c015e428e51ac5b1b38238) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/4Brail.png using Guid(42184c7c65c015e428e51ac5b1b38238) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '811ba80be737b75daf49c42fc26d012c') in 0.011336 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 166.555544 seconds.
+  path: Assets/Folders/Materials/ASCIIMaterial.mat
+  artifactKey: Guid(4bb8f99ee82233647978e32821b557b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/ASCIIMaterial.mat using Guid(4bb8f99ee82233647978e32821b557b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f121a737428e39d008189a60605337fa') in 0.018673 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/Folders/Materials/BrailMat.mat
+  artifactKey: Guid(8d9f1f7d16b878943bdb6d1c2f637cfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailMat.mat using Guid(8d9f1f7d16b878943bdb6d1c2f637cfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32a54a1d19aa7d0d58eaaca5fb28cbf1') in 0.029966 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 25.676369 seconds.
+  path: Assets/Folders/Materials/BrailShader.shadergraph
+  artifactKey: Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailShader.shadergraph using Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a64921b46d2616a35121ef8a3dd61835') in 0.010809 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 91.026742 seconds.
+  path: Assets/Folders/Materials/BrailShader.shadergraph
+  artifactKey: Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailShader.shadergraph using Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1175f3ea2a1d9d4f577c99d6b3f06190') in 0.003512 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.910343 seconds.
+  path: Assets/Folders/Materials/BrailShader.shadergraph
+  artifactKey: Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailShader.shadergraph using Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b12ab57fc6eb79f67067e54b22019d65') in 0.002460 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.880060 seconds.
+  path: Assets/Folders/Materials/BrailShader.shadergraph
+  artifactKey: Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailShader.shadergraph using Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61805986023babd4473a69ea544c99f3') in 0.002632 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.564608 seconds.
+  path: Assets/Folders/Materials/BrailShader.shadergraph
+  artifactKey: Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailShader.shadergraph using Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bf312eff414a6f09438f49bee5dce13') in 0.002610 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.942308 seconds.
+  path: Assets/Folders/Materials/BrailShader.shadergraph
+  artifactKey: Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailShader.shadergraph using Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fb5ab588fb7f8e74933f14e43cdeb74') in 0.002435 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.095610 seconds.
+  path: Assets/Folders/Materials/BrailShader.shadergraph
+  artifactKey: Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailShader.shadergraph using Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50709c9e2ca0309d0648cf8dd0966acb') in 0.002452 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.826553 seconds.
+  path: Assets/Folders/Materials/BrailShader.shadergraph
+  artifactKey: Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailShader.shadergraph using Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e3fe47affaa5a2496e33513eefddae1') in 0.002737 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.074952 seconds.
+  path: Assets/Folders/Materials/BrailShader.shadergraph
+  artifactKey: Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailShader.shadergraph using Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '576e4a1d3cdcb0f475fc7b498da22be5') in 0.002269 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.987143 seconds.
+  path: Assets/Folders/Materials/BrailShader.shadergraph
+  artifactKey: Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailShader.shadergraph using Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ff040e289470581c409d4274d8936e9') in 0.002779 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.977893 seconds.
+  path: Assets/Folders/Materials/BrailShader.shadergraph
+  artifactKey: Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailShader.shadergraph using Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '842a7bb07726695023ccbf8fe87540f8') in 0.002568 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.484045 seconds.
+  path: Assets/Folders/Materials/BrailShader.shadergraph
+  artifactKey: Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailShader.shadergraph using Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75d624271381f10b74e4e5225c28c56e') in 0.002544 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.830982 seconds.
+  path: Assets/Folders/Materials/BrailShader.shadergraph
+  artifactKey: Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailShader.shadergraph using Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '479b73ff05fed7a092b6de9659dce0b8') in 0.002330 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 378.529574 seconds.
+  path: Assets/Folders/Materials/BrailShader.shadergraph
+  artifactKey: Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailShader.shadergraph using Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6656ec2f01caf32f6018beb6a4e7d619') in 0.003407 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 278.167275 seconds.
+  path: Assets/Folders/Materials/BrailShader.shadergraph
+  artifactKey: Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailShader.shadergraph using Guid(7240f94cb3fa89c45a4f1bbd6c263545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb1b6d09f316e893c879fccc5f8acd42') in 0.004797 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 243.481567 seconds.
+  path: Assets/Folders/Materials/ASCIIShader.shadergraph
+  artifactKey: Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/ASCIIShader.shadergraph using Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7aa4f036bce08c4c6f925a3e22914c6') in 0.006729 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 322.244256 seconds.
+  path: Assets/Folders/Materials/ASCIIMaterial.mat
+  artifactKey: Guid(4bb8f99ee82233647978e32821b557b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/ASCIIMaterial.mat using Guid(4bb8f99ee82233647978e32821b557b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '661d293222a7c8a3c78e02ba9478232e') in 0.012084 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/Folders/Materials/BrailMat.mat
+  artifactKey: Guid(8d9f1f7d16b878943bdb6d1c2f637cfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailMat.mat using Guid(8d9f1f7d16b878943bdb6d1c2f637cfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '756d88b913e7d1d4167306c15f9a2331') in 0.018521 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 116.758174 seconds.
+  path: Assets/Folders/Materials/ASCIIMaterial.mat
+  artifactKey: Guid(4bb8f99ee82233647978e32821b557b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/ASCIIMaterial.mat using Guid(4bb8f99ee82233647978e32821b557b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc770bba13f51f597658d8a5c2f039e8') in 0.006733 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.700325 seconds.
+  path: Assets/Folders/Materials/ASCIIShader.shadergraph
+  artifactKey: Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/ASCIIShader.shadergraph using Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5930b27aeefdb89543f6b5479d7c917f') in 0.002514 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 87.691560 seconds.
+  path: Assets/Folders/Materials/ASCIIMaterial.mat
+  artifactKey: Guid(4bb8f99ee82233647978e32821b557b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/ASCIIMaterial.mat using Guid(4bb8f99ee82233647978e32821b557b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bad8fc13c1c24612a615db39f4e24fa') in 0.008275 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.824283 seconds.
+  path: Assets/Folders/Materials/ASCIIMaterial.mat
+  artifactKey: Guid(4bb8f99ee82233647978e32821b557b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/ASCIIMaterial.mat using Guid(4bb8f99ee82233647978e32821b557b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04caa3fa573716b5b3e94020888a6171') in 0.008508 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000391 seconds.
+  path: Assets/Folders/Materials/BrailMat.mat
+  artifactKey: Guid(8d9f1f7d16b878943bdb6d1c2f637cfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/BrailMat.mat using Guid(8d9f1f7d16b878943bdb6d1c2f637cfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9714d36a6767043901dfca9802c2f77') in 0.019166 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.135507 seconds.
+  path: Assets/UniversalRenderPipelineAsset_Renderer.asset
+  artifactKey: Guid(fd9251d923ab1f743a0b181473bccd18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniversalRenderPipelineAsset_Renderer.asset using Guid(fd9251d923ab1f743a0b181473bccd18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3dd6698b66e2f285301c938de80985ea') in 0.008957 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 149.130295 seconds.
+  path: Assets/Folders/ShaderImgs/BrailSheet0.png
+  artifactKey: Guid(cd9b5b792fddda24b9bec748c7ab9adc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/BrailSheet0.png using Guid(cd9b5b792fddda24b9bec748c7ab9adc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '822fa8c312c890e67194e54ec23aecd7') in 0.015981 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.149498 seconds.
+  path: Assets/Folders/ShaderImgs/BrailSheet0.png
+  artifactKey: Guid(cd9b5b792fddda24b9bec748c7ab9adc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/BrailSheet0.png using Guid(cd9b5b792fddda24b9bec748c7ab9adc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '226b0b55c413971cf742a7ecc12c6240') in 0.012395 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 75.354918 seconds.
+  path: Assets/Folders/Materials/ASCIIMaterial.mat
+  artifactKey: Guid(4bb8f99ee82233647978e32821b557b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/ASCIIMaterial.mat using Guid(4bb8f99ee82233647978e32821b557b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7b5c1d0919f3816bdd9bfa5476c0784') in 0.005981 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.773154 seconds.
+  path: Assets/Folders/Materials/ASCIIShader.shadergraph
+  artifactKey: Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/ASCIIShader.shadergraph using Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe93a0626faacb2d689c5332b160a8d0') in 0.002128 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.280675 seconds.
+  path: Assets/Folders/Materials/ASCIIShader.shadergraph
+  artifactKey: Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/Materials/ASCIIShader.shadergraph using Guid(418ef6a4c27c50144a8ed2794715bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae572e22dd9d778fec3b45bdd9042010') in 0.001893 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 789.617370 seconds.
+  path: Assets/Folders/ShaderImgs/BrailSheet2_9.png
+  artifactKey: Guid(cd26cf98c9773084eb1595b943a50581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/BrailSheet2_9.png using Guid(cd26cf98c9773084eb1595b943a50581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e3fddd6511fbd3e097f6d3bf39a4e28') in 0.011984 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/Folders/ShaderImgs/TighterBrail.png
+  artifactKey: Guid(de8144e13fbbb884e807a58ef21bf522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/TighterBrail.png using Guid(de8144e13fbbb884e807a58ef21bf522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd740d9dc3adba49c8ab888d650bfe879') in 0.008517 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.059348 seconds.
+  path: Assets/Folders/ShaderImgs/BrailSheet2_9.png
+  artifactKey: Guid(cd26cf98c9773084eb1595b943a50581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Folders/ShaderImgs/BrailSheet2_9.png using Guid(cd26cf98c9773084eb1595b943a50581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9574910825bde557360531d6648cb7e4') in 0.015794 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
