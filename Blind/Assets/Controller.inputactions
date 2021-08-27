@@ -20,6 +20,22 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Fire",
+                    "type": "Value",
+                    "id": "7a987e9f-b57b-4dc8-8380-521d841d8dc2",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "AltFire",
+                    "type": "Button",
+                    "id": "18afae9d-52a6-4cc4-83a6-b6710689947b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press"
                 }
             ],
             "bindings": [
@@ -86,6 +102,28 @@
                     "processors": "ScaleVector2(x=0.1,y=0.1)",
                     "groups": "",
                     "action": "Look Delta",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0cec3103-9690-495c-bf26-fe61e4d26752",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "af9327c0-2363-4422-9ec5-6f078aa2ecfe",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AltFire",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
