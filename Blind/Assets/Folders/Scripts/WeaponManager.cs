@@ -17,15 +17,15 @@ public class WeaponManager : MonoBehaviour
     [SerializeField] Transform weaponParent;
     [SerializeField] GameObject blockGun;
     [SerializeField] WepManState state;
-
-    public Transform playerCam;
-    PlayerInput playerInput;
     public IWeapon currentWeapon;
+
+    public PlayerController plrCon;
+    PlayerInput playerInput;
 
     void Start()
     {
+        plrCon = GetComponent<PlayerController>();
         state = WepManState.NONE;
-        playerCam = Camera.main.transform;
         playerInput = GetComponent<PlayerInput>();
     }
 

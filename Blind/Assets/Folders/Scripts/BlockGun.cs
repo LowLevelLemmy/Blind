@@ -17,15 +17,10 @@ public class BlockGun : MonoBehaviour, IWeapon
 
     float lastFireTime = -1;
 
-    void Start()
-    {
-
-    }
-
     public void SetDependencies(WeaponManager owner)
     {
         anim = GetComponent<Animator>();
-        playerCam = owner.playerCam;
+        playerCam = owner.plrCon.plrCamera;
     }
 
     public void Throw()
