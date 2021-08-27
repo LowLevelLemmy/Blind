@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlayerInteractioner : MonoBehaviour
+public class PlayerInteractor : MonoBehaviour
 {
     [SerializeField] LayerMask layerMsk;
 
@@ -14,7 +14,7 @@ public class PlayerInteractioner : MonoBehaviour
 
     void Awake()
     {
-        plrCon ??= GetComponent<PlayerController>();
+        plrCon = GetComponent<PlayerController>();
     }
 
     void Update()
@@ -22,19 +22,23 @@ public class PlayerInteractioner : MonoBehaviour
         Collider[] hitCols = Physics.OverlapSphere(plrCon.plrCamera.position + plrCon.plrCamera.forward * 0.5f, 0.75f, layerMsk, QueryTriggerInteraction.Collide);
         if (hitCols.IsNullOrEmpty())
         {
-            OnLostSightOfInteraction?.Invoke();
+            OnLostSightOfInteraction?.Invoke(); // lets UI know to hide interact UI
             return;
         }
 
-        if (hitCols[0].TryGetComponent<IInteractable>(out var interactable))
+        foreach(Collider col in hitCols)
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (col.TryGetComponent<IInteractable>(out var interactable))
             {
-                interactable.OnInteractedWith(this);
-            }
+                if (plrCon.playerInput.use)    // replace with playerInput
+                {
+                    interactable.OnInteractedWith(this);
+                }
 
-            interactable.OnLookedAt(this);
-            OnInteractTxtShouldComeUpNow?.Invoke(interactable);
+                interactable.OnLookedAt(this);
+                OnInteractTxtShouldComeUpNow?.Invoke(interactable);
+            }
         }
+
     }
 }

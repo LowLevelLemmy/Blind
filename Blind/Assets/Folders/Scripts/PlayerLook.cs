@@ -34,7 +34,7 @@ public class PlayerLook : MonoBehaviour
         // limit the camera's vertical angle to min/max
         camVerticalAngle = Mathf.Clamp(camVerticalAngle, -89f, 89f);
 
-        // apply the vertical angle as a local rotation to the camera transform along its right axis (makes it pivot up and down)
-        plrCon.playerInput.transform.localEulerAngles = new Vector3(camVerticalAngle, 0, 0);
+        // apply the vertical angle as a local rotation to the HEAD transform along its right axis (makes it pivot up and down)
+        plrCon.head.localEulerAngles = new Vector3(camVerticalAngle, 0, 0);
     }
 }

@@ -20,13 +20,12 @@ public class WeaponManager : MonoBehaviour
     public IWeapon currentWeapon;
 
     public PlayerController plrCon;
-    PlayerInput playerInput;
+    PlayerInput playerInput => plrCon.playerInput;
 
     void Start()
     {
         plrCon = GetComponent<PlayerController>();
         state = WepManState.NONE;
-        playerInput = GetComponent<PlayerInput>();
     }
 
     void Update()
@@ -41,9 +40,9 @@ public class WeaponManager : MonoBehaviour
     }
 
     [Button]
-    void EquipWeapon()
+    public void EquipWeapon(GameObject weapon)
     {
-        currentWeapon = Instantiate(blockGun, weaponParent).GetComponent<IWeapon>();
+        currentWeapon = Instantiate(weapon, weaponParent).GetComponent<IWeapon>();
         currentWeapon.owner = this;
 
         state = WepManState.SWAPPING;

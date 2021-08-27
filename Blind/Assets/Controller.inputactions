@@ -31,8 +31,16 @@
                 },
                 {
                     "name": "AltFire",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "18afae9d-52a6-4cc4-83a6-b6710689947b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press"
+                },
+                {
+                    "name": "Use",
+                    "type": "Value",
+                    "id": "3cbfdd57-1d41-404e-9770-030f36c633f6",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Press"
@@ -124,6 +132,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "AltFire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "08995002-a132-4d00-b46a-a1f3f8f82590",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Use",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -1,6 +1,6 @@
 public interface IInteractable
 {
     public string interactTxt { get; }
-    public void OnLookedAt(PlayerInteractioner plrInteractor);
-    public void OnInteractedWith(PlayerInteractioner plrInteractor);
+    public void OnLookedAt(PlayerInteractor plrInteractor);
+    public void OnInteractedWith(PlayerInteractor plrInteractor);
 }

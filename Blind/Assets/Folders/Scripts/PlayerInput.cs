@@ -7,13 +7,17 @@ public class PlayerInput : MonoBehaviour
 {
     public Vector2 move;
     public Vector2 lookDelta;
+
     public bool fire;
     public bool altFire;
+    public bool use;
+
 
     void LateUpdate()
     {
         fire = false;
         altFire = false;
+        use = false;
     }
 
     void OnMove(InputValue context)
@@ -34,5 +38,10 @@ public class PlayerInput : MonoBehaviour
     void OnAltFire(InputValue context)
     {
         altFire = context.isPressed;
+    }
+
+    void OnUse(InputValue context)
+    {
+        use = context.isPressed;
     }
 }
