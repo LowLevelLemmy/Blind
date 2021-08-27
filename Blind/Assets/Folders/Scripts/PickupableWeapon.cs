@@ -5,8 +5,11 @@ using UnityEngine;
 public class PickupableWeapon : MonoBehaviour, IInteractable
 {
     [SerializeField] GameObject pickupableWeapon;
-    string pickUpForTheFirstTimeTxt => "Hold F to pickup " + "Weapon";  // pickupableWeapon.;
+    [SerializeField] float maxDistance = 5;
 
+    public float maxDist => maxDistance;
+    public Vector3 pos => transform.position;
+    string pickUpForTheFirstTimeTxt => "Hold F to pickup " + "Weapon";  // pickupableWeapon
     public string interactTxt { get => pickUpForTheFirstTimeTxt; }
 
     public void OnInteractedWith(PlayerInteractor plrInteractor)

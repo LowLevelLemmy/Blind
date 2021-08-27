@@ -12,7 +12,7 @@ public class BlockGun : MonoBehaviour, IWeapon
     public WeaponManager owner { get; set; }
 
     // Dependecies
-    Transform playerCam;
+    Transform playerCam => owner.plrCon.plrCamera;
     Animator anim;
 
     float lastFireTime = -1;
@@ -20,7 +20,6 @@ public class BlockGun : MonoBehaviour, IWeapon
     public void SetDependencies(WeaponManager owner)
     {
         anim = GetComponent<Animator>();
-        playerCam = owner.plrCon.plrCamera;
     }
 
     public void Throw()

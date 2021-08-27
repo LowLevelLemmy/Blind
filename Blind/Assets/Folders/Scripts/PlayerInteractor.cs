@@ -9,8 +9,9 @@ public class PlayerInteractor : MonoBehaviour
 
     public UnityAction<IInteractable> OnInteractTxtShouldComeUpNow;
     public UnityAction OnLostSightOfInteraction;
-
     public PlayerController plrCon;
+
+    Transform playerCam => plrCon.plrCamera;
 
     void Awake()
     {
@@ -19,26 +20,21 @@ public class PlayerInteractor : MonoBehaviour
 
     void Update()
     {
-        Collider[] hitCols = Physics.OverlapSphere(plrCon.plrCamera.position + plrCon.plrCamera.forward * 0.5f, 0.75f, layerMsk, QueryTriggerInteraction.Collide);
-        if (hitCols.IsNullOrEmpty())
+        RaycastHit hit;
+        Vector3 bulletDirection = playerCam.forward;
+        if (Physics.Raycast(playerCam.position, bulletDirection, out hit, 1000, layerMsk, QueryTriggerInteraction.Collide))
         {
-            OnLostSightOfInteraction?.Invoke(); // lets UI know to hide interact UI
-            return;
-        }
-
-        foreach(Collider col in hitCols)
-        {
-            if (col.TryGetComponent<IInteractable>(out var interactable))
+            if (hit.collider.TryGetComponent<IInteractable>(out var interactable))
             {
-                if (plrCon.playerInput.use)    // replace with playerInput
-                {
+                float dist = Vector3.Distance(transform.position, interactable.pos);
+                if (dist > interactable.maxDist) return;    // distance check
+
+                if (plrCon.playerInput.use)
                     interactable.OnInteractedWith(this);
-                }
 
                 interactable.OnLookedAt(this);
                 OnInteractTxtShouldComeUpNow?.Invoke(interactable);
             }
         }
-
     }
 }
