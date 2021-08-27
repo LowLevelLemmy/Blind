@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class BlockGun : MonoBehaviour, IWeapon
 {
@@ -12,6 +13,7 @@ public class BlockGun : MonoBehaviour, IWeapon
 
     // Dependecies
     Transform playerCam;
+    Animator anim;
 
     float lastFireTime = -1;
 
@@ -22,21 +24,29 @@ public class BlockGun : MonoBehaviour, IWeapon
 
     public void SetDependencies(WeaponManager owner)
     {
+        anim = GetComponent<Animator>();
         playerCam = owner.playerCam;
     }
 
-    void Update()
-    {
-
-    }
     public void Throw()
     {
         print("Throw!");
     }
 
-    public void TakeOutWeapon()
+    public void TakeOutWeapon(TweenCallback call)
     {
         SetDependencies(owner);
+        anim.Play("TakeOut");
+        float dur = anim.GetCurrentAnimatorStateInfo(0).length; // get duration of animation
+        DOVirtual.DelayedCall(dur, call);
+    }
+
+    public void PutAwayWeapon(TweenCallback call)
+    {
+        SetDependencies(owner);
+        anim.Play("PutAway");
+        float dur = anim.GetCurrentAnimatorStateInfo(0).length; // get duration of animation
+        DOVirtual.DelayedCall(dur, call);
     }
 
     public void Fire()

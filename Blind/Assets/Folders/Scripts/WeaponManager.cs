@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 using EasyButtons;
 
 [System.Serializable]
@@ -44,10 +45,13 @@ public class WeaponManager : MonoBehaviour
     {
         currentWeapon = Instantiate(blockGun, weaponParent).GetComponent<IWeapon>();
         currentWeapon.owner = this;
-        currentWeapon.TakeOutWeapon();
 
         state = WepManState.SWAPPING;
-        // animate equipping animation
+        currentWeapon.TakeOutWeapon(OnWeaponReady);
+    }
+
+    void OnWeaponReady()
+    {
         state = WepManState.READY;
     }
 }

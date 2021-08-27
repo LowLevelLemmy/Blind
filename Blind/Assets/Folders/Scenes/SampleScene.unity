@@ -2280,6 +2280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponParent: {fileID: 1159399187}
   blockGun: {fileID: 1057220552267244890, guid: 2a78259d8c1781240832dc5d03e3b565, type: 3}
+  state: 0
   playerCam: {fileID: 0}
 --- !u!1 &868711525
 GameObject:
