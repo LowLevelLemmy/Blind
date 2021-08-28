@@ -16,6 +16,8 @@ public class PickupableWeapon : MonoBehaviour, IInteractable
 
     public void OnInteractedWith(PlayerInteractor plrInteractor)
     {
+        if (plrInteractor.plrCon.weaponManager.state != WepManState.NONE)
+            return;
         Transform cam = plrInteractor.plrCon.plrCamera;
         Vector3 pos = cam.position;
         pos += (-cam.right * 0.3f);

@@ -53,6 +53,9 @@ public class WeaponManager : MonoBehaviour
     [Button]
     public void EquipWeapon(GameObject weapon)  // no animation
     {
+        if (state != WepManState.NONE)  // we're already holding a weapon
+            return;
+
         state = WepManState.SWAPPING;
         currentWeapon = Instantiate(weapon, weaponParent).GetComponent<AbstractWeapon>();
         currentWeapon.owner = this;
