@@ -5,6 +5,7 @@ using DG.Tweening;
 
 public class PickupableWeapon : MonoBehaviour, IInteractable
 {
+    [Header("Settings:")]
     [SerializeField] GameObject pickupableWeapon;
     [SerializeField] float maxDistance = 5;
 

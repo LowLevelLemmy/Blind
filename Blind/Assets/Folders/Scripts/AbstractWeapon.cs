@@ -6,21 +6,21 @@ using DG.Tweening;
 public abstract class AbstractWeapon : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] GameObject throwableWeapon;
+    [SerializeField] protected GameObject throwableWeapon;
 
     [Header("Settings")]
-    [SerializeField] float timeBetweenShots;
-    [SerializeField] float takeOutTime = 0.57f;
-    [SerializeField] float throwForce = 10f;
-    [SerializeField] LayerMask layerMask;
+    [SerializeField] protected float timeBetweenShots;
+    [SerializeField] protected float takeOutTime = 0.57f;
+    [SerializeField] protected float throwForce = 10f;
+    [SerializeField] protected LayerMask layerMask;
 
     public WeaponManager owner;
-    Transform playerCam => owner.plrCon.plrCamera;
+    protected Transform playerCam => owner.plrCon.plrCamera;
 
-    Animator anim;
-    float lastFireTime = -999;
+    protected Animator anim;
+    protected float lastFireTime = -999;
 
-    public virtual void GetDependencies()
+    protected virtual void GetDependencies()
     {
         anim = GetComponent<Animator>();
     }
@@ -28,7 +28,7 @@ public abstract class AbstractWeapon : MonoBehaviour
     public virtual void Throw() // handles throwing physics
     {
         Vector3 spawnPos = playerCam.position + (playerCam.forward * 0.3f) + (playerCam.up * 0.1f);
-        Rigidbody rb = Instantiate(throwableWeapon, spawnPos, Quaternion.identity).GetComponent<Rigidbody>();
+        Rigidbody rb = Instantiate(throwableWeapon, spawnPos, Random.rotation).GetComponent<Rigidbody>();
 
         Vector3 forceVec = playerCam.forward * throwForce;
         rb.AddForce(forceVec, ForceMode.Impulse);
@@ -41,7 +41,7 @@ public abstract class AbstractWeapon : MonoBehaviour
         DOVirtual.DelayedCall(takeOutTime, () => Func(call));
     }
 
-    public virtual void Func(TweenCallback cally)  // SUPER HORRIBLE FIX   // I made this bc the delayed call would happpen AFTER the weapon is thrown and destroyed. This "Func" prevents that
+    protected virtual void Func(TweenCallback cally)  // SUPER HORRIBLE FIX   // I made this bc the delayed call would happpen AFTER the weapon is thrown and destroyed. This "Func" prevents that
     {
         // idk how "func" even RUNS if I destoryed the gameobject it's attached to. But who knows?
         if (this != null && owner != null)
