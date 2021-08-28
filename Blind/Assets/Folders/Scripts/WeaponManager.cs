@@ -14,12 +14,16 @@ public enum WepManState
 
 public class WeaponManager : MonoBehaviour
 {
+    [Header("Settings")]
+    [SerializeField] float interactCoolDown;
     [SerializeField] Transform weaponParent;
     [SerializeField] GameObject blockGun;
-    [SerializeField] WepManState state;
+    public WepManState state;
+
+    [Header("References")]
+    public PlayerController plrCon;
     public IWeapon currentWeapon;
 
-    public PlayerController plrCon;
     PlayerInput playerInput => plrCon.playerInput;
 
     void Start()
@@ -30,28 +34,44 @@ public class WeaponManager : MonoBehaviour
 
     void Update()
     {
-        if (state != WepManState.READY) return;
-
-        if (playerInput.fire)
+        if (playerInput.fire && state == WepManState.READY)
+        {
             currentWeapon.Fire();
+        }
 
-        if (playerInput.altFire)
-            currentWeapon.Throw();
+        if (playerInput.altFire && state != WepManState.NONE)
+            ThrowCurWeapon();
+    }
+
+    void ThrowCurWeapon()
+    {
+        if (currentWeapon == null) return;
+        currentWeapon.Throw();
+        UnEquipWeapon();
     }
 
     [Button]
-    public void EquipWeapon(GameObject weapon)
+    public void EquipWeapon(GameObject weapon)  // no animation
     {
+        state = WepManState.SWAPPING;
         currentWeapon = Instantiate(weapon, weaponParent).GetComponent<IWeapon>();
         currentWeapon.owner = this;
-
-        state = WepManState.SWAPPING;
         currentWeapon.TakeOutWeapon(OnWeaponReady);
+    }
+
+    [Button]
+    public void UnEquipWeapon() // no animation
+    {
+        if (currentWeapon == null) return;
+        state = WepManState.NONE;
+        Destroy(currentWeapon.owner = null);
+        Destroy(currentWeapon.gunGameObject);
     }
 
     void OnWeaponReady()
     {
-        state = WepManState.READY;
-        print("WEAPON READY");
+        // How come this is called after I destroy the object when throwing??!?
+        if (state == WepManState.SWAPPING)  // this is not a good fix, bc WepState can be "Swapping" with a different weapon.
+            state = WepManState.READY;
     }
 }

@@ -26,4 +26,10 @@ public static class ExtensionMethods
     {
         return array == null || array.Length == 0;
     }
+
+    public static Vector3 RandomVec3(Vector3 min, Vector3 max)
+    {
+        return new Vector3(UnityEngine.Random.Range(min.x, max.x), UnityEngine.Random.Range(min.y, max.y), UnityEngine.Random.Range(min.z, max.z));
+    }
+
 }

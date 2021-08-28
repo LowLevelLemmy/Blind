@@ -6,10 +6,13 @@ using UnityEngine.Events;
 public class PlayerInteractor : MonoBehaviour
 {
     [SerializeField] LayerMask layerMsk;
+    [SerializeField] float interactCoolDown = 0.2f;
 
     public UnityAction<IInteractable> OnInteractTxtShouldComeUpNow;
     public UnityAction OnLostSightOfInteraction;
     public PlayerController plrCon;
+
+    float lastTimeInteracted = -999;
 
     Transform playerCam => plrCon.plrCamera;
 
@@ -20,6 +23,9 @@ public class PlayerInteractor : MonoBehaviour
 
     void Update()
     {
+        if (Time.time - lastTimeInteracted < interactCoolDown)
+            return;
+
         RaycastHit hit;
         Vector3 bulletDirection = playerCam.forward;
         if (Physics.Raycast(playerCam.position, bulletDirection, out hit, 1000, layerMsk, QueryTriggerInteraction.Collide))

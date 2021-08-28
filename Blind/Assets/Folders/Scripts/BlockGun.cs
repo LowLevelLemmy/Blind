@@ -5,37 +5,54 @@ using DG.Tweening;
 
 public class BlockGun : MonoBehaviour, IWeapon
 {
-    //Settings:
+    [Header("References")]
+    [SerializeField] GameObject throwableWeapon;
+
+    [Header("Settings")]
     [SerializeField] float timeBetweenShots;
-    [SerializeField] float takeOutTime = 0.5666666666666667f;
+    [SerializeField] float takeOutTime = 0.57f;
+    [SerializeField] float throwForce = 10f;
     [SerializeField] LayerMask layerMask;
 
     // properties
     public WeaponManager owner { get; set; }
+    public GameObject gunGameObject => gameObject;
 
-    // Dependecies
     Transform playerCam => owner.plrCon.plrCamera;
+
+
     Animator anim;
 
     float lastFireTime = -999;
 
-    public void SetDependencies(WeaponManager owner)
+    public void GetDependencies()
     {
         anim = GetComponent<Animator>();
     }
 
-    public void Throw()
+    public void Throw() // handles throwing physics
     {
-        print("Throw!");
+        Vector3 spawnPos = playerCam.position + (playerCam.forward * 0.3f) + (playerCam.up * 0.1f);
+        Rigidbody rb = Instantiate(throwableWeapon, spawnPos, Quaternion.identity).GetComponent<Rigidbody>();
+
+        Vector3 forceVec = playerCam.forward * throwForce;
+        rb.AddForce(forceVec, ForceMode.Impulse);
+        rb.AddTorque(ExtensionMethods.RandomVec3(Vector3.one * -800, Vector3.one * 800));   // applied rotation
     }
 
     public void TakeOutWeapon(TweenCallback call)
     {
-        SetDependencies(owner);
+        GetDependencies();
         anim.Play("TakeOut");
-
-        DOVirtual.DelayedCall(takeOutTime, call);
+        DOVirtual.DelayedCall(takeOutTime, () => func(call));
     }
+
+    void func(TweenCallback cally)  // SUPER HORRIBLE FIX   // I made this bc the delayed call would happpen AFTER the weapon is thrown and destroyed. This "Func" prevents that
+    {
+        // idk how "func" even RUNS if I destoryed the gameobject it's attached to. But who knows?
+        if (this != null && owner != null)
+            cally();
+    }   // This func fix causes DoTween to have safe mode errors. Weird
 
     public void Fire()
     {
