@@ -43,7 +43,15 @@
                     "id": "3cbfdd57-1d41-404e-9770-030f36c633f6",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": ""
+                },
+                {
+                    "name": "Jump",
+                    "type": "Value",
+                    "id": "c2f20930-a94a-44fa-8ebe-83722ab8a959",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -143,6 +151,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Use",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ea392c3b-3188-417e-b58e-b0da89af4ace",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

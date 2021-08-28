@@ -2429,7 +2429,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef25ce2eead62f4098f0e31b3bff4d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: -0.5
+  gravity: -9.81
+  jumpHeight: 5
+  speed: 12
 --- !u!114 &840611346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2475,7 +2477,7 @@ CharacterController:
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
-  m_SkinWidth: 0.08
+  m_SkinWidth: 0.05
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &840611348
@@ -2511,6 +2513,7 @@ MonoBehaviour:
   fire: 0
   altFire: 0
   use: 0
+  jump: 0
 --- !u!114 &840611350
 MonoBehaviour:
   m_ObjectHideFlags: 0

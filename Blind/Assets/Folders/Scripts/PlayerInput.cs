@@ -11,6 +11,7 @@ public class PlayerInput : MonoBehaviour
     public bool fire;
     public bool altFire;
     public bool use;
+    public bool jump;
 
 
     void LateUpdate()
@@ -18,6 +19,7 @@ public class PlayerInput : MonoBehaviour
         fire = false;
         altFire = false;
         use = false;
+        jump = false;
     }
 
     void OnMove(InputValue context)
@@ -43,5 +45,10 @@ public class PlayerInput : MonoBehaviour
     void OnUse(InputValue context)
     {
         use = context.isPressed;
+    }
+
+    void OnJump(InputValue context)
+    {
+        jump = context.isPressed;
     }
 }
