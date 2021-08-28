@@ -22,7 +22,7 @@ public class WeaponManager : MonoBehaviour
 
     [Header("References")]
     public PlayerController plrCon;
-    public IWeapon currentWeapon;
+    public AbstractWeapon currentWeapon;
 
     PlayerInput playerInput => plrCon.playerInput;
 
@@ -54,7 +54,7 @@ public class WeaponManager : MonoBehaviour
     public void EquipWeapon(GameObject weapon)  // no animation
     {
         state = WepManState.SWAPPING;
-        currentWeapon = Instantiate(weapon, weaponParent).GetComponent<IWeapon>();
+        currentWeapon = Instantiate(weapon, weaponParent).GetComponent<AbstractWeapon>();
         currentWeapon.owner = this;
         currentWeapon.TakeOutWeapon(OnWeaponReady);
     }
@@ -65,7 +65,7 @@ public class WeaponManager : MonoBehaviour
         if (currentWeapon == null) return;
         state = WepManState.NONE;
         Destroy(currentWeapon.owner = null);
-        Destroy(currentWeapon.gunGameObject);
+        Destroy(currentWeapon.gameObject);
     }
 
     void OnWeaponReady()
