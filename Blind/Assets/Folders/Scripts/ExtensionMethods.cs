@@ -32,4 +32,12 @@ public static class ExtensionMethods
         return new Vector3(UnityEngine.Random.Range(min.x, max.x), UnityEngine.Random.Range(min.y, max.y), UnityEngine.Random.Range(min.z, max.z));
     }
 
+    public static void SpawnBall(Vector3 pos)
+    {
+        GameObject decal = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+
+        decal.transform.position = pos;
+        decal.transform.localScale = Vector3.one * 0.3f;
+        decal.GetComponent<Renderer>().material.color = Color.blue;
+    }
 }
