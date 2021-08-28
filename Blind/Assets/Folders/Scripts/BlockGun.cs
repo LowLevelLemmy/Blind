@@ -5,6 +5,7 @@ using DG.Tweening;
 
 public class BlockGun : AbstractWeapon
 {
+    [SerializeField] GameObject bulletPrefab;
     public override void Fire()
     {
         if (!canFire)
@@ -12,11 +13,7 @@ public class BlockGun : AbstractWeapon
 
         RaycastHit hit;
         Vector3 bulletDirection = playerCam.forward;
-        if (Physics.Raycast(playerCam.position, bulletDirection, out hit, 1000, layerMask, QueryTriggerInteraction.Ignore))
-        {
-            if (hit.collider.TryGetComponent<IHurtable>(out var hurtable))
-                hurtable.OnHurt();
-        }
+        var spawnedBullet = Instantiate(bulletPrefab, playerCam.position + (playerCam.forward * 0.6f), playerCam.rotation);
         base.Fire();
     }
 }
