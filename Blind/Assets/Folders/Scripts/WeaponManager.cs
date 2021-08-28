@@ -17,7 +17,7 @@ public class WeaponManager : MonoBehaviour
     [Header("Settings")]
     [SerializeField] float interactCoolDown;
     [SerializeField] Transform weaponParent;
-    [SerializeField] GameObject blockGun;
+    //[SerializeField] GameObject blockGun;
     public WepManState state;
 
     [Header("References")]
