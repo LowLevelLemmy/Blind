@@ -70,8 +70,7 @@ public class WeaponManager : MonoBehaviour
 
     void OnWeaponReady()
     {
-        // How come this is called after I destroy the object when throwing??!?
-        if (state == WepManState.SWAPPING)  // this is not a good fix, bc WepState can be "Swapping" with a different weapon.
+        if (state == WepManState.SWAPPING)
             state = WepManState.READY;
     }
 }
