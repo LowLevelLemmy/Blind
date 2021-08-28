@@ -15,11 +15,12 @@ public abstract class AbstractWeapon : MonoBehaviour
     [SerializeField] protected LayerMask layerMask;
 
     public WeaponManager owner;
-    protected Transform playerCam => owner.plrCon.plrCamera;
 
     protected Animator anim;
     protected float lastFireTime = -999;
 
+    protected Transform playerCam => owner.plrCon.plrCamera;
+    protected bool canFire => Time.time - lastFireTime >= timeBetweenShots;
     protected virtual void GetDependencies()
     {
         anim = GetComponent<Animator>();
@@ -50,21 +51,10 @@ public abstract class AbstractWeapon : MonoBehaviour
 
     public virtual void Fire()
     {
-        if (Time.time - lastFireTime < timeBetweenShots)
+        if (!canFire)
             return;
 
         lastFireTime = Time.time;
         anim.Play("Fire");
-        RaycastHit hit;
-        Vector3 bulletDirection = playerCam.forward;
-        if (Physics.Raycast(playerCam.position, bulletDirection, out hit, 1000, layerMask, QueryTriggerInteraction.Ignore))
-        {
-            print("Hit: " + hit.collider.name);
-            //GameObject decal = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-
-            //decal.transform.position = hit.point;
-            //decal.transform.localScale = Vector3.one * 0.3f;
-            //decal.GetComponent<Renderer>().material.color = Color.red;
-        }
     }
 }
