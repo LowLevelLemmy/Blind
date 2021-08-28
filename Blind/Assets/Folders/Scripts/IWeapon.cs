@@ -8,6 +8,5 @@ public interface IWeapon
     public void Fire();
     public void Throw();
     public void TakeOutWeapon(TweenCallback call);  // call is what's called when weapon is taken OUT!
-    public void PutAwayWeapon(TweenCallback call);
     public WeaponManager owner { get; set; }
 }

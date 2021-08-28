@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Active: 0
   settings:
-    Event: 500
-    blitMaterial: {fileID: 2100000, guid: 4bb8f99ee82233647978e32821b557b7, type: 2}
+    Event: 1000
+    blitMaterial: {fileID: 2100000, guid: 373f639668fe24944806821b6b468b8d, type: 2}
     blitMaterialPassIndex: 0
     setInverseViewMatrix: 0
     requireDepthNormals: 0
-    srcType: 0
-    srcTextureId: 
+    srcType: 1
+    srcTextureId: _AfterPostProcessTexture
     srcTextureObject: {fileID: 0}
-    dstType: 0
-    dstTextureId: 
+    dstType: 1
+    dstTextureId: _AfterPostProcessTexture
     dstTextureObject: {fileID: 0}
     overrideGraphicsFormat: 0
     graphicsFormat: 8

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class PickupableWeapon : MonoBehaviour, IInteractable
 {
@@ -14,11 +15,19 @@ public class PickupableWeapon : MonoBehaviour, IInteractable
 
     public void OnInteractedWith(PlayerInteractor plrInteractor)
     {
-        plrInteractor.plrCon.weaponManager.EquipWeapon(pickupableWeapon);
+        Transform cam = plrInteractor.plrCon.plrCamera;
+        Vector3 pos = cam.position;
+        pos += (-cam.right * 0.3f);
+
+        transform.DOMove(pos, 0.1f);
+        transform.DORotateQuaternion(Random.rotation, 0.1f);
+
+        DOVirtual.DelayedCall(.1f, () => plrInteractor.plrCon.weaponManager.EquipWeapon(pickupableWeapon));
+        DOVirtual.DelayedCall(.1f, () => Destroy(gameObject));
     }
 
     public void OnLookedAt(PlayerInteractor plrInteractor)
     {
-        print("LOOKED AT");
+        //TODO: display pickup? UI
     }
 }

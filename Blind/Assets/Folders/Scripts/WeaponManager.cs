@@ -52,5 +52,6 @@ public class WeaponManager : MonoBehaviour
     void OnWeaponReady()
     {
         state = WepManState.READY;
+        print("WEAPON READY");
     }
 }

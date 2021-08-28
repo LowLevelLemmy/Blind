@@ -5,7 +5,9 @@ using DG.Tweening;
 
 public class BlockGun : MonoBehaviour, IWeapon
 {
+    //Settings:
     [SerializeField] float timeBetweenShots;
+    [SerializeField] float takeOutTime = 0.5666666666666667f;
     [SerializeField] LayerMask layerMask;
 
     // properties
@@ -15,7 +17,7 @@ public class BlockGun : MonoBehaviour, IWeapon
     Transform playerCam => owner.plrCon.plrCamera;
     Animator anim;
 
-    float lastFireTime = -1;
+    float lastFireTime = -999;
 
     public void SetDependencies(WeaponManager owner)
     {
@@ -31,16 +33,8 @@ public class BlockGun : MonoBehaviour, IWeapon
     {
         SetDependencies(owner);
         anim.Play("TakeOut");
-        float dur = anim.GetCurrentAnimatorStateInfo(0).length; // get duration of animation
-        DOVirtual.DelayedCall(dur, call);
-    }
 
-    public void PutAwayWeapon(TweenCallback call)
-    {
-        SetDependencies(owner);
-        anim.Play("PutAway");
-        float dur = anim.GetCurrentAnimatorStateInfo(0).length; // get duration of animation
-        DOVirtual.DelayedCall(dur, call);
+        DOVirtual.DelayedCall(takeOutTime, call);
     }
 
     public void Fire()
@@ -49,7 +43,7 @@ public class BlockGun : MonoBehaviour, IWeapon
             return;
 
         lastFireTime = Time.time;
-
+        anim.Play("Fire");
         RaycastHit hit;
         Vector3 bulletDirection = playerCam.forward;
         if (Physics.Raycast(playerCam.position, bulletDirection, out hit, 1000, layerMask, QueryTriggerInteraction.Ignore))

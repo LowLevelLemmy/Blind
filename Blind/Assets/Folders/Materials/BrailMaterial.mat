@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ASCIIMaterial
+  m_Name: BrailMaterial
   m_Shader: {fileID: -6465566751694194690, guid: 418ef6a4c27c50144a8ed2794715bf16, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -20,10 +20,14 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - ASCIISpriteSheet:
-        m_Texture: {fileID: 2800000, guid: 1258efb010b3dc94d8d1ed1c87ea280f, type: 3}
+        m_Texture: {fileID: 2800000, guid: e9c9591d455f75b42a3c58b9952e0c00, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -41,10 +45,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Contrast: 1
+    - Contrast: 1.91
     - Height: 1080
-    - Res: 50
-    - SpriteSheetCount: 94
+    - Res: 20
+    - SpriteSheetCount: 6
+    - TEMP: 1.77
     - Width: 1920
     m_Colors: []
   m_BuildTextureStacks: []
