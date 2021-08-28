@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 161971914078866337}
   - component: {fileID: 6343054512858416488}
   - component: {fileID: 6713099972455062719}
+  - component: {fileID: 6342137910149852723}
   m_Layer: 8
   m_Name: ThrowableMeleeBar
   m_TagString: Untagged
@@ -129,3 +130,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupableWeapon: {fileID: 1388211416570876341, guid: a42f0c3e8759aba4eaa0c047e2635a7b, type: 3}
   maxDistance: 5
+--- !u!114 &6342137910149852723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161971914078866398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77bbe19ac471e32469eddb4d08a9034b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

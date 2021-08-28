@@ -14,7 +14,6 @@ public class BlockGun : AbstractWeapon
         Vector3 bulletDirection = playerCam.forward;
         if (Physics.Raycast(playerCam.position, bulletDirection, out hit, 1000, layerMask, QueryTriggerInteraction.Ignore))
         {
-            print("Hit: " + hit.collider.name);
             if (hit.collider.TryGetComponent<IHurtable>(out var hurtable))
                 hurtable.OnHurt();
         }

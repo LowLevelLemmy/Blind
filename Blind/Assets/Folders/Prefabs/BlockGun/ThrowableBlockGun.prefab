@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6786308923775851165}
   - component: {fileID: 6786308923775851164}
   - component: {fileID: 6786308923775851170}
+  - component: {fileID: 2513247478439743299}
   m_Layer: 8
   m_Name: ThrowableBlockGun
   m_TagString: Untagged
@@ -129,6 +130,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupableWeapon: {fileID: 1057220552267244890, guid: 2a78259d8c1781240832dc5d03e3b565, type: 3}
   maxDistance: 4
+--- !u!114 &2513247478439743299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6786308923775851168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77bbe19ac471e32469eddb4d08a9034b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6786308923775851175
 GameObject:
   m_ObjectHideFlags: 0
