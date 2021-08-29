@@ -24,8 +24,6 @@ public class WeaponManager : MonoBehaviour
     public PlayerController plrCon;
     public AbstractWeapon currentWeapon;
 
-    PlayerInput playerInput => plrCon.playerInput;
-
     void Start()
     {
         plrCon = GetComponent<PlayerController>();
@@ -34,12 +32,12 @@ public class WeaponManager : MonoBehaviour
 
     void Update()
     {
-        if (playerInput.fire && state == WepManState.READY)
+        if (plrCon.input_Fire && state == WepManState.READY)
         {
             currentWeapon.Fire();
         }
 
-        if (playerInput.altFire && state != WepManState.NONE)
+        if (plrCon.input_AltFire && state != WepManState.NONE)
             ThrowCurWeapon();
     }
 

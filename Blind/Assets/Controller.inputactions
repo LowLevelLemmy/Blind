@@ -15,7 +15,7 @@
                 },
                 {
                     "name": "Look Delta",
-                    "type": "PassThrough",
+                    "type": "Value",
                     "id": "51793fee-6604-42eb-9ba2-75e900fa5dfe",
                     "expectedControlType": "Vector2",
                     "processors": "",

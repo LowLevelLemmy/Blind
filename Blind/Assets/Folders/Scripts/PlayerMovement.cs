@@ -10,15 +10,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float jumpHeight = -5f;
     [SerializeField] float speed = 12f;
 
-    PlayerInput playerInput;
     CharacterController cc;
+    PlayerController plrCon;
     Vector3 verticleVel;
     bool isGrounded;
 
     void Start()
     {
+        plrCon = GetComponent<PlayerController>();
         cc = GetComponent<CharacterController>();
-        playerInput = GetComponent<PlayerInput>();
     }
 
     void Update()
@@ -27,12 +27,12 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded)
             verticleVel.y = -2;
 
-        Vector3 move = transform.right * playerInput.move.x + transform.forward * playerInput.move.y;
+        Vector3 move = transform.right * plrCon.input_Move.x + transform.forward * plrCon.input_Move.y;
         cc.Move(move * speed * Time.deltaTime);
 
 
         // Changes the height position of the player..
-        if (playerInput.jump && isGrounded)
+        if (plrCon.input_Jump && isGrounded)
             verticleVel.y = jumpHeight;
 
         verticleVel.y += gravity * Time.deltaTime;

@@ -22,7 +22,7 @@ public class PlayerLook : MonoBehaviour
 
     void HandleLook()
     {
-        Vector2 lookdelt = plrCon.playerInput.lookDelta;
+        Vector2 lookdelt = plrCon.input_LookDelta;
 
         // Horizontal Char Rotation:
         float rotDegrees = lookdelt.x * camRotSpeed;

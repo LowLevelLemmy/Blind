@@ -11,7 +11,6 @@ public class BlockGun : AbstractWeapon
         if (!canFire)
             return;
 
-        RaycastHit hit;
         Vector3 bulletDirection = playerCam.forward;
         var spawnedBullet = Instantiate(bulletPrefab, playerCam.position + (playerCam.forward * 0.6f), playerCam.rotation);
         base.Fire();
