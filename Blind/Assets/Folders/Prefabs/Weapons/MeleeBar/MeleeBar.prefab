@@ -121,6 +121,6 @@ MonoBehaviour:
   throwForce: 10
   layerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 513
   owner: {fileID: 0}
   swingRange: 3
