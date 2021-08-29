@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class NavAgentAnimater : MonoBehaviour
 {
+    ZombieController zomCon;
     NavMeshAgent agent;
     Animator anim;
 
@@ -12,6 +13,7 @@ public class NavAgentAnimater : MonoBehaviour
 
     void Start()
     {
+        zomCon = GetComponent <ZombieController>();
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
     }
@@ -19,8 +21,10 @@ public class NavAgentAnimater : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        vel = agent.velocity.magnitude / agent.speed;   // 0 to 1 range
+        if (zomCon.ragdolled)
+            return;
 
+        vel = agent.velocity.magnitude / agent.speed;   // 0 to 1 range
         anim.SetFloat("Speed", vel);
     }
 }

@@ -16,8 +16,8 @@ public class MeleeBar : AbstractWeapon
         if (Physics.Raycast(playerCam.position, bulletDirection, out hit, swingRange, layerMask, QueryTriggerInteraction.Ignore))
         {
             print("Swing hit: " + hit.collider.name);
-            if (hit.collider.TryGetComponent<IHurtable>(out var hurtable))
-                hurtable.OnHurt();
+            var hurtable = hit.collider.GetComponentInChildren<IHurtable>();
+            hurtable?.OnHurt();
         }
         base.Fire();
     }

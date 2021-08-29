@@ -4,22 +4,18 @@ using UnityEngine;
 
 public class ZombieHealth : MonoBehaviour, IHurtable
 {
+    ZombieController zomCon;
+
+    void Start()
+    {
+        zomCon = GetComponent<ZombieController>();
+    }
 
     public void OnHurt()
     {
         // ragdoll
         // despawn after 5 secs
-        Destroy(gameObject);
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    void EnableRagdoll()
-    {
-
+        zomCon.EnableRagdoll();
+        Destroy(gameObject, 5);
     }
 }
