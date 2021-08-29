@@ -13,16 +13,16 @@ public class PlayerInput : MonoBehaviour
     public bool use;
     public bool jump;
 
-    PlayerController plrCon;
+    IControlable con;   // short for controller :)
 
-    private void OnEnable()
+    void OnEnable()
     {
-        plrCon = GetComponent<PlayerController>();
+        con = GetComponent<IControlable>();
     }
 
     void Update()
     {
-        plrCon.SetInputs(move, lookDelta, fire, altFire, use, jump);
+        con.SetInputs(move, lookDelta, fire, altFire, use, jump);
     }
 
     void LateUpdate()

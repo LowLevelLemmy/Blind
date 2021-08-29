@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour   // holds popular player vars and all scripts
+public class PlayerController : MonoBehaviour, IControlable   // holds popular player vars and all scripts
 {
     //
     //  Like a literal "Controller" set inputs here.

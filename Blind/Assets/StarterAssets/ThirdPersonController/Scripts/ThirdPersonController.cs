@@ -9,7 +9,7 @@ using UnityEngine.InputSystem;
 namespace StarterAssets
 {
 	[RequireComponent(typeof(CharacterController))]
-	public class ThirdPersonController : MonoBehaviour
+	public class ThirdPersonController : MonoBehaviour, IControlable
 	{
 		[Header("Player")]
 		[Tooltip("Move speed of the character in m/s")]
@@ -44,6 +44,15 @@ namespace StarterAssets
 		[Tooltip("What layers the character uses as ground")]
 		public LayerMask GroundLayers;
 
+		[Header("Inputs:")]
+		public Vector2 input_Move;
+		public Vector2 input_LookDelta;
+
+		public bool input_Fire;
+		public bool input_AltFire;
+		public bool input_Use;
+		public bool input_Jump;
+
 		// player
 		private float _speed;
 		private float _animationBlend;
@@ -65,28 +74,18 @@ namespace StarterAssets
 
 		private Animator _animator;
 		private CharacterController _controller;
-		private StarterAssetsInputs _input;
-		private GameObject _mainCamera;
 
 		private const float _threshold = 0.01f;
 
 		private bool _hasAnimator;
 
-		private void Awake()
-		{
-			// get a reference to our main camera
-			if (_mainCamera == null)
-			{
-				_mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
-			}
-		}
+		[SerializeField] Transform plr;
 
 		private void Start()
 		{
+			plr = GameObject.FindGameObjectWithTag("Player").transform;
 			_hasAnimator = TryGetComponent(out _animator);
 			_controller = GetComponent<CharacterController>();
-			_input = GetComponent<StarterAssetsInputs>();
-
 			AssignAnimationIDs();
 
 			// reset our timeouts on start
@@ -94,7 +93,17 @@ namespace StarterAssets
 			_fallTimeoutDelta = FallTimeout;
 		}
 
-		private void Update()
+		public void SetInputs(Vector2 move, Vector2 lookDelt, bool fire, bool altFire, bool use, bool jump)
+		{
+			input_Move = move;
+			input_LookDelta = lookDelt;
+			input_AltFire = altFire;
+			input_Fire = fire;
+			input_Use = use;
+			input_Jump = jump;
+		}
+
+		void Update()
 		{
 			_hasAnimator = TryGetComponent(out _animator);
 			
@@ -128,26 +137,25 @@ namespace StarterAssets
 		private void Move()
 		{
 			// set target speed based on move speed, sprint speed and if sprint is pressed
-			float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
+			float targetSpeed = SprintSpeed;
 
 			// a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
 
 			// note: Vector2's == operator uses approximation so is not floating point error prone, and is cheaper than magnitude
 			// if there is no input, set the target speed to 0
-			if (_input.move == Vector2.zero) targetSpeed = 0.0f;
+			if (input_Move == Vector2.zero) targetSpeed = 0.0f;
 
 			// a reference to the players current horizontal velocity
 			float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
 
 			float speedOffset = 0.1f;
-			float inputMagnitude = _input.analogMovement ? _input.move.magnitude : 1f;
 
 			// accelerate or decelerate to target speed
 			if (currentHorizontalSpeed < targetSpeed - speedOffset || currentHorizontalSpeed > targetSpeed + speedOffset)
 			{
 				// creates curved result rather than a linear one giving a more organic speed change
 				// note T in Lerp is clamped, so we don't need to clamp our speed
-				_speed = Mathf.Lerp(currentHorizontalSpeed, targetSpeed * inputMagnitude, Time.deltaTime * SpeedChangeRate);
+				_speed = Mathf.Lerp(currentHorizontalSpeed, targetSpeed, Time.deltaTime * SpeedChangeRate);
 
 				// round speed to 3 decimal places
 				_speed = Mathf.Round(_speed * 1000f) / 1000f;
@@ -159,13 +167,13 @@ namespace StarterAssets
 			_animationBlend = Mathf.Lerp(_animationBlend, targetSpeed, Time.deltaTime * SpeedChangeRate);
 
 			// normalise input direction
-			Vector3 inputDirection = new Vector3(_input.move.x, 0.0f, _input.move.y).normalized;
+			Vector3 inputDirection = new Vector3(input_Move.x, 0.0f, input_Move.y).normalized;
 
 			// note: Vector2's != operator uses approximation so is not floating point error prone, and is cheaper than magnitude
 			// if there is a move input rotate player when the player is moving
-			if (_input.move != Vector2.zero)
+			if (input_Move != Vector2.zero)
 			{
-				_targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg + _mainCamera.transform.eulerAngles.y;
+				_targetRotation = Quaternion.LookRotation(plr.position - transform.position).eulerAngles.y;
 				float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, _targetRotation, ref _rotationVelocity, RotationSmoothTime);
 
 				// rotate to face input direction relative to camera position
@@ -182,7 +190,7 @@ namespace StarterAssets
 			if (_hasAnimator)
 			{
 				_animator.SetFloat(_animIDSpeed, _animationBlend);
-				_animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
+				_animator.SetFloat(_animIDMotionSpeed, 1);
 			}
 		}
 
@@ -207,7 +215,7 @@ namespace StarterAssets
 				}
 
 				// Jump
-				if (_input.jump && _jumpTimeoutDelta <= 0.0f)
+				if (input_Jump && _jumpTimeoutDelta <= 0.0f)
 				{
 					// the square root of H * -2 * G = how much velocity needed to reach desired height
 					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
@@ -245,7 +253,7 @@ namespace StarterAssets
 				}
 
 				// if we are not grounded, do not jump
-				_input.jump = false;
+				input_Jump = false;
 			}
 
 			// apply gravity over time if under terminal (multiply by delta time twice to linearly speed up over time)
@@ -266,5 +274,5 @@ namespace StarterAssets
 			// when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
 			Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
 		}
-	}
+    }
 }
