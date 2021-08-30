@@ -2,23 +2,89 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using DG.Tweening;
+
+public enum ZombieStates
+{
+    CHASING,
+    ATTACKING,
+    DEAD
+}
 
 public class ZombieController : MonoBehaviour
 {
-    public bool ragdolled;  // TODO: Replace with enum of states. Called "Zombie States"
+    [Header("Settings")]
+    [SerializeField] float maxAttackDistance = 1;
+
     public NavMeshAgent agent;
+    public Transform target;
     Animator anim;
+    ZombieAttack zomAttack;
+
+    public ZombieStates state { get; private set; }
+
+    void SetState(ZombieStates newState)
+    {
+        if (state != ZombieStates.DEAD)
+            state = newState;
+    }
 
     void OnEnable()
     {
+        target = GameObject.FindGameObjectWithTag("Player").transform;
+        zomAttack = GetComponent<ZombieAttack>();
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         DisableRagdoll();
     }
 
-    public void EnableRagdoll()
+    void Update()
     {
-        ragdolled = true;
+        Think();
+    }
+
+    void Think()
+    {
+        switch (state)
+        {
+            case ZombieStates.CHASING:
+                ChasingThink();
+                break;
+        }
+    }
+
+    void ChasingThink()
+    {
+        agent.SetDestination(target.position);
+        if (Vector3.Distance(transform.position, target.position) <= maxAttackDistance)
+        {
+            if (zomAttack.CanAttack)
+                Attack();
+        }
+    }
+
+    void Attack()
+    {
+        state = ZombieStates.ATTACKING;
+        agent.isStopped = true;
+        zomAttack.AnimateAttack();
+        DOVirtual.DelayedCall(zomAttack.attackCooldown, StartChasing);
+    }
+
+    void StartChasing()
+    {
+        state = ZombieStates.CHASING;
+        agent.isStopped = false;
+    }
+
+    public void Die()
+    {
+        state = ZombieStates.DEAD;
+        EnableRagdoll();
+    }
+
+    void EnableRagdoll()
+    {
         anim.enabled = false;
         agent.enabled = false;
 
@@ -41,7 +107,6 @@ public class ZombieController : MonoBehaviour
 
     public void DisableRagdoll()
     {
-        ragdolled = false;
         anim.enabled = true;
         agent.enabled = true;
 

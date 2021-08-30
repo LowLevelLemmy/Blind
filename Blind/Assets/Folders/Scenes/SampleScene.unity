@@ -2506,8 +2506,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72b34db3978e23e44879d40aacb5f864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPoint: {fileID: 367326611}
   attackRadius: 0.5
+  attackFrame: 33
+  attackCooldown: 2
+  attackPoint: {fileID: 367326611}
 --- !u!114 &517107910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2544,7 +2546,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18cceab4fdf1c9d459e68d3171f14f6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 840611348}
 --- !u!114 &517107913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2557,8 +2558,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8af843a275bf2ce42b2c7546809d9700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ragdolled: 0
+  maxAttackDistance: 1.2
   agent: {fileID: 0}
+  target: {fileID: 0}
 --- !u!54 &517107914
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2598,12 +2600,12 @@ NavMeshAgent:
   m_GameObject: {fileID: 517107908}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.27
+  m_Radius: 0.18
   m_Speed: 2
   m_Acceleration: Infinity
   avoidancePriority: 50
   m_AngularSpeed: 1000
-  m_StoppingDistance: 1
+  m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -3981,7 +3983,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 840611344}
   m_LocalRotation: {x: 0, y: 0.71642375, z: -0, w: -0.6976654}
-  m_LocalPosition: {x: 0.002764225, y: 1.0820563, z: -0.11742768}
+  m_LocalPosition: {x: 7.85, y: 1.0820563, z: 2.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1695954370}
@@ -12433,7 +12435,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18cceab4fdf1c9d459e68d3171f14f6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 840611348}
 --- !u!54 &4416926082911193633
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12459,12 +12460,12 @@ NavMeshAgent:
   m_GameObject: {fileID: 4416926082911193631}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.27
+  m_Radius: 0.18
   m_Speed: 2
   m_Acceleration: Infinity
   avoidancePriority: 50
   m_AngularSpeed: 1000
-  m_StoppingDistance: 1
+  m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -12522,8 +12523,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8af843a275bf2ce42b2c7546809d9700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ragdolled: 0
+  maxAttackDistance: 1.2
   agent: {fileID: 0}
+  target: {fileID: 0}
 --- !u!114 &4416926082911193639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12536,8 +12538,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72b34db3978e23e44879d40aacb5f864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPoint: {fileID: 111215753}
   attackRadius: 0.5
+  attackFrame: 33
+  attackCooldown: 2
+  attackPoint: {fileID: 111215753}
 --- !u!1 &4523139367835598403
 GameObject:
   m_ObjectHideFlags: 0

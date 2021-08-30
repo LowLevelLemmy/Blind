@@ -13,9 +13,6 @@ public class ZombieHealth : MonoBehaviour, IHurtable
 
     public void OnHurt()
     {
-        // ragdoll
-        // despawn after 5 secs
-        zomCon.EnableRagdoll();
-        Destroy(gameObject, 5);
+        zomCon.Die();
     }
 }
