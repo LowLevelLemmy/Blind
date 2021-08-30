@@ -47,7 +47,6 @@ public class ZombieMover : MonoBehaviour
             Vector3 vecAway = (transform.position - zom.position);
             avoidanceVec += vecAway;
         }
-        print("Avoidance vec: " + avoidanceVec);
         return avoidanceVec.normalized;
     }
 

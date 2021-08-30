@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using DG.Tweening;
+using UnityEngine.Events;
 
 public enum ZombieStates
 {
@@ -23,6 +24,8 @@ public class ZombieController : MonoBehaviour
     ZombieAttack zomAttack;
 
     public ZombieStates state { get; private set; }
+
+    public UnityEvent<GameObject> OnDeath;
 
     void SetState(ZombieStates newState)
     {
@@ -57,7 +60,6 @@ public class ZombieController : MonoBehaviour
                 break;
 
             case ZombieStates.DEAD:
-                print("DEAAAD!");
                 break;
         }
     }
@@ -100,6 +102,7 @@ public class ZombieController : MonoBehaviour
     {
         SetState(ZombieStates.DEAD);
         EnableRagdoll();
+        OnDeath?.Invoke(gameObject);
     }
 
     void EnableRagdoll()
