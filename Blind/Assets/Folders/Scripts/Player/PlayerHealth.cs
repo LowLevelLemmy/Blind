@@ -8,6 +8,6 @@ public class PlayerHealth : MonoBehaviour, IHurtable
     public void OnHurt()
     {
         --hearts;
-        print("PLAYER HURT! Hearts Left: " + hearts);
+        //print("PLAYER HURT! Hearts Left: " + hearts);
     }
 }

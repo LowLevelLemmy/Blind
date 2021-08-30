@@ -35,6 +35,8 @@ public class ZombieAttack : MonoBehaviour
 
     void Attack()
     {
+        if (zomCom.state != ZombieStates.ATTACKING)
+            return;
         Collider[] cols = Physics.OverlapSphere(attackPoint.position, attackRadius);
         foreach (var col in cols)
         {

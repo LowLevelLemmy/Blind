@@ -15,7 +15,7 @@ public class ZombieController : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] float maxAttackDistance = 1;
-    [SerializeField] float attackRotationSpeed = 6;
+    public float rotSpeed = 6;
 
     public NavMeshAgent agent;
     public Transform target;
@@ -55,6 +55,10 @@ public class ZombieController : MonoBehaviour
             case ZombieStates.ATTACKING:
                 AttackingThink();
                 break;
+
+            case ZombieStates.DEAD:
+                print("DEAAAD!");
+                break;
         }
     }
 
@@ -64,7 +68,7 @@ public class ZombieController : MonoBehaviour
         Vector3 abba = target.position - transform.position;
         abba.y = 0;
         Quaternion targetRot = Quaternion.LookRotation(abba);
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, attackRotationSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, rotSpeed * Time.deltaTime);
     }
 
     void ChasingThink()
@@ -79,7 +83,7 @@ public class ZombieController : MonoBehaviour
 
     void Attack()
     {
-        state = ZombieStates.ATTACKING;
+        SetState(ZombieStates.ATTACKING);
         agent.isStopped = true;
         zomAttack.AnimateAttack();
         DOVirtual.DelayedCall(zomAttack.attackCooldown, StartChasing);
@@ -88,7 +92,8 @@ public class ZombieController : MonoBehaviour
     void StartChasing()
     {
         SetState(ZombieStates.CHASING);
-        agent.isStopped = false;
+        if (state == ZombieStates.CHASING)
+            agent.isStopped = false;
     }
 
     public void Die()
