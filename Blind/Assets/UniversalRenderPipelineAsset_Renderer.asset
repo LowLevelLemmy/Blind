@@ -19,11 +19,11 @@ MonoBehaviour:
     blitMaterialPassIndex: 0
     setInverseViewMatrix: 0
     requireDepthNormals: 0
-    srcType: 1
-    srcTextureId: _AfterPostProcessTexture
+    srcType: 0
+    srcTextureId: 
     srcTextureObject: {fileID: 0}
-    dstType: 1
-    dstTextureId: _AfterPostProcessTexture
+    dstType: 0
+    dstTextureId: 
     dstTextureObject: {fileID: 0}
     overrideGraphicsFormat: 0
     graphicsFormat: 8

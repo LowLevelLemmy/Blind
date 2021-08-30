@@ -2559,6 +2559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxAttackDistance: 1.2
+  attackRotationSpeed: 6
   agent: {fileID: 0}
   target: {fileID: 0}
 --- !u!54 &517107914
@@ -12524,6 +12525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxAttackDistance: 1.2
+  attackRotationSpeed: 6
   agent: {fileID: 0}
   target: {fileID: 0}
 --- !u!114 &4416926082911193639

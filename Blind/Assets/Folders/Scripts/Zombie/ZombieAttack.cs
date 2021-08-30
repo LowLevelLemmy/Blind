@@ -38,7 +38,6 @@ public class ZombieAttack : MonoBehaviour
         Collider[] cols = Physics.OverlapSphere(attackPoint.position, attackRadius);
         foreach (var col in cols)
         {
-            print("Zombie hit: " + col.name);
             if (col.CompareTag("Player"))
             {
                 var hurtable = col.GetComponent<IHurtable>();
