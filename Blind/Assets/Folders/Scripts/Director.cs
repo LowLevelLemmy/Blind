@@ -62,7 +62,7 @@ public class Director : MonoBehaviour
         ++currentRound;
         print("NEW ROUND: " + currentRound);
         zomsLeftToSpawn += zomsOnRound1 * currentRound;
-        delayFactor = delayFactor * .99f;
+        delayFactor *= .99f;
         SpawnZoms();
     }
 }

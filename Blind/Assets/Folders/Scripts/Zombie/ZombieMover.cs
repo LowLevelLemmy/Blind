@@ -9,6 +9,7 @@ public class ZombieMover : MonoBehaviour
     [SerializeField] ZombieController zomCom;
     [SerializeField] float avoidanceRadius = 2;
     [SerializeField] float avoidanceIntensity = 3;
+    [SerializeField] float moveDampen = 1;
 
     NavMeshAgent agent => zomCom.agent;
 
@@ -31,7 +32,8 @@ public class ZombieMover : MonoBehaviour
         Vector3 avoidanceVec = GetAvoidanceVector();
 
         avoidanceTamed = Vector3.Lerp(avoidanceTamed, avoidanceVec, avoidanceIntensity * Time.deltaTime);
-        transform.position = agentDesiredPos + avoidanceTamed;
+        transform.position = Vector3.Lerp(transform.position, agentDesiredPos + avoidanceTamed, moveDampen * Time.deltaTime);  // Moving
+        //transform.position = agentDesiredPos + avoidanceTamed;    // No dampening
 
         if (agent.velocity != Vector3.zero)
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(agent.velocity), zomCom.rotSpeed * Time.deltaTime);

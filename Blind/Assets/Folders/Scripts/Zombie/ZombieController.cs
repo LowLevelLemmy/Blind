@@ -86,7 +86,7 @@ public class ZombieController : MonoBehaviour
     void Attack()
     {
         SetState(ZombieStates.ATTACKING);
-        agent.isStopped = true;
+        agent.destination = transform.position;
         zomAttack.AnimateAttack();
         DOVirtual.DelayedCall(zomAttack.attackCooldown, StartChasing);
     }
@@ -94,8 +94,6 @@ public class ZombieController : MonoBehaviour
     void StartChasing()
     {
         SetState(ZombieStates.CHASING);
-        if (state == ZombieStates.CHASING)
-            agent.isStopped = false;
     }
 
     public void Die()
