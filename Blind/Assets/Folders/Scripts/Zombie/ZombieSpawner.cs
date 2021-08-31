@@ -23,7 +23,8 @@ public class ZombieSpawner : MonoBehaviour
 
         var spawnedZom = Instantiate(zombiePrefab, spawnLocations[i].position, spawnLocations[i].rotation);
         spawnedZombies.Add(spawnedZom);
-        spawnedZom.GetComponent<ZombieController>().OnDeath.AddListener(OnZombieKilled);
+        //spawnedZom.GetComponent<ZombieController>().OnDeath.AddListener(OnZombieKilled);
+        spawnedZom.GetComponent<Animator>().SetTrigger("RunJump");
 
 
         OnZombieSpawned?.Invoke(spawnedZom);
