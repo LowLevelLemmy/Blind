@@ -140,7 +140,7 @@ public class ZombieController : MonoBehaviour
             }
             else
             {
-                c.isTrigger = true;
+                c.isTrigger = false;
                 rb.isKinematic = true;
             }
         }

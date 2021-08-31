@@ -11,15 +11,13 @@ public class Bullet : MonoBehaviour
         transform.position += transform.forward * speed * Time.deltaTime;
     }
 
-
-    void OnTriggerEnter(Collider col)
+    void OnCollisionEnter(Collision col)
     {
-        if (col.TryGetComponent<IHurtable>(out var hurtable))
-        {
-            hurtable.OnHurt();
-        }
+        var hurtable = col.transform.root.GetComponent<IHurtable>();
+        hurtable?.OnHurt();
+        print(col.transform.root.name);
 
-        // Instantiate some particles too
+        // TODO: Instantiate some particles too
         Destroy(gameObject);
     }
 }

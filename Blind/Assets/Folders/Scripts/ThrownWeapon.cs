@@ -19,11 +19,10 @@ public class ThrownWeapon : MonoBehaviour
 
         //print("collided with:" + col.gameObject.name);
 
-        if (col.gameObject.TryGetComponent<IHurtable>(out var hurtable))
-        {
-            if (deadily)
-                hurtable.OnHurt();
-        }
+        var hurtable = col.transform.root.GetComponent<IHurtable>();
+
+        if (deadily)
+            hurtable?.OnHurt();
 
         deadily = false;    // this way, it's deadily until it collides with something.
     }

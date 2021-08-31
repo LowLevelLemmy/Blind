@@ -512,7 +512,6 @@ GameObject:
   - component: {fileID: 520626335182732470}
   - component: {fileID: 5897901524838409932}
   - component: {fileID: 896904929966810673}
-  - component: {fileID: 896904929966810672}
   - component: {fileID: 896904929966810674}
   - component: {fileID: 896904929966810677}
   - component: {fileID: 896904929966810679}
@@ -584,20 +583,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!136 &896904929966810672
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 896904929966810636}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.27
-  m_Height: 1.773681
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.9054366, z: 0}
 --- !u!54 &896904929966810674
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -888,8 +873,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.32689846, y: 0.28032815, z: 0.24770999}
-  m_Center: {x: -0.00000029802322, y: 0.14016406, z: -0.023194551}
+  m_Size: {x: 0.32689846, y: 0.4043033, z: 0.24770999}
+  m_Center: {x: -0.00000029802322, y: 0.20215166, z: -0.023194551}
 --- !u!54 &1966957150673140296
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1121,8 +1106,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.081724614
-  m_Center: {x: 0, y: 0.081724614, z: 0}
+  m_Radius: 0.1138259
+  m_Center: {x: 0, y: 0.03777549, z: 0.019}
 --- !u!54 &2473089030989108803
 Rigidbody:
   m_ObjectHideFlags: 0
