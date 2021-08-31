@@ -44,7 +44,7 @@ ModelImporter:
       name: InPlaceJump
       takeName: mixamo.com
       internalID: 0
-      firstFrame: 3
+      firstFrame: 5
       lastFrame: 28
       wrapMode: 0
       orientationOffsetY: 0
