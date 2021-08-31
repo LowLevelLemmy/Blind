@@ -672,7 +672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zomCom: {fileID: 896904929966810677}
   avoidanceRadius: 0.7
-  avoidanceIntensity: 1
+  avoidanceIntensity: 2.05
   moveDampen: 1
 --- !u!1 &972287362993945823
 GameObject:
