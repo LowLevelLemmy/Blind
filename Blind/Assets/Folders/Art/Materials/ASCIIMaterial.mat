@@ -43,7 +43,7 @@ Material:
     m_Floats:
     - Contrast: 1
     - Height: 1080
-    - Remaping: 0.03
+    - Remaping: 0
     - Res: 70
     - SpriteSheetCount: 93
     - Width: 1920

@@ -28,6 +28,7 @@ public class ZombieAttack : MonoBehaviour
 
     public void AnimateAttack()
     {
+        print("Animating Attack");
         lastAttackTime = Time.time;
         anim.SetTrigger("Attack");
         DOVirtual.DelayedCall(AttackDur, Attack);
@@ -37,12 +38,13 @@ public class ZombieAttack : MonoBehaviour
     {
         if (zomCom.state != ZombieStates.ATTACKING)
             return;
+        
         Collider[] cols = Physics.OverlapSphere(attackPoint.position, attackRadius);
         foreach (var col in cols)
         {
             if (col.CompareTag("Player"))
             {
-                var hurtable = col.GetComponent<IHurtable>();
+                var hurtable = col.transform.root.GetComponent<IHurtable>();
                 hurtable.OnHurt();
             }
         }
