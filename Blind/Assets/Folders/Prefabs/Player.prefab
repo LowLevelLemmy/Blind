@@ -292,6 +292,12 @@ MonoBehaviour:
   state: 0
   plrCon: {fileID: 0}
   currentWeapon: {fileID: 0}
+  OnWeaponEquiped:
+    m_PersistentCalls:
+      m_Calls: []
+  OnWeaponUnEquiped:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &8966418441031575849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -489,8 +495,8 @@ Camera:
   m_GameObject: {fileID: 8966418441328201240}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
