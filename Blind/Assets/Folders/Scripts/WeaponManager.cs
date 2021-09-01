@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using DG.Tweening;
 using EasyButtons;
 
@@ -23,6 +24,9 @@ public class WeaponManager : MonoBehaviour
     [Header("References")]
     public PlayerController plrCon;
     public AbstractWeapon currentWeapon;
+
+    public UnityEvent<AbstractWeapon> OnWeaponEquiped;
+    public UnityEvent<AbstractWeapon> OnWeaponUnEquiped;
 
     void Start()
     {
@@ -57,7 +61,8 @@ public class WeaponManager : MonoBehaviour
         state = WepManState.SWAPPING;
         currentWeapon = Instantiate(weapon, weaponParent).GetComponent<AbstractWeapon>();
         currentWeapon.owner = this;
-        currentWeapon.TakeOutWeapon(OnWeaponReady);
+        currentWeapon.TakeOutWeapon(OnWeaponReady); // animation
+        OnWeaponEquiped?.Invoke(currentWeapon);
     }
 
     [Button]
@@ -65,6 +70,7 @@ public class WeaponManager : MonoBehaviour
     {
         if (currentWeapon == null) return;
         state = WepManState.NONE;
+        OnWeaponUnEquiped?.Invoke(currentWeapon);
         Destroy(currentWeapon.owner = null);
         Destroy(currentWeapon.gameObject);
     }

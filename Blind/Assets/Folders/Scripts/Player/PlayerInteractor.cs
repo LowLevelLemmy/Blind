@@ -41,7 +41,7 @@ public class PlayerInteractor : MonoBehaviour
 
                 lookingAtInteractable = true;
 
-                if (plrCon.input_Use)
+                if (plrCon.input_Use)   // INTERACTED WITH!
                     interactable.OnInteractedWith(this);
 
                 interactable.OnLookedAt(this);

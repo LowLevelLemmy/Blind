@@ -13,6 +13,7 @@ public abstract class AbstractWeapon : MonoBehaviour
     [SerializeField] protected float takeOutTime = 0.57f;
     [SerializeField] protected float throwForce = 10f;
     [SerializeField] protected LayerMask layerMask;
+    [SerializeField] public bool shouldDisplayCrosshair;
 
     public WeaponManager owner;
 
