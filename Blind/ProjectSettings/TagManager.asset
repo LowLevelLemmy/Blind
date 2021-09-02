@@ -17,7 +17,7 @@ TagManager:
   - Player
   - Interactable
   - Enemy
-  - 
+  - IgnoreRagdolling
   - 
   - 
   - 

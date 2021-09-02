@@ -119,11 +119,12 @@ public class ZombieController : MonoBehaviour
             }
             else
             {
+                c.gameObject.layer = LayerMask.NameToLayer("IgnoreRagdolling");
                 c.isTrigger = false;
                 rb.isKinematic = false;
             }
         }
-        DOVirtual.DelayedCall(3, FreezeRagdoll);
+        DOVirtual.DelayedCall(5, FreezeRagdoll);
 
     }
 
