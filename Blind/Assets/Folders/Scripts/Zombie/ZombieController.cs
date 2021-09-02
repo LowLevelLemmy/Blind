@@ -7,6 +7,7 @@ using UnityEngine.Events;
 
 public enum ZombieStates
 {
+    SPAWNING,
     CHASING,
     ATTACKING,
     DEAD
@@ -27,7 +28,7 @@ public class ZombieController : MonoBehaviour
 
     public UnityEvent<GameObject> OnDeath;
 
-    void SetState(ZombieStates newState)
+    public void SetState(ZombieStates newState)
     {
         if (state != ZombieStates.DEAD)
             state = newState;
@@ -39,6 +40,7 @@ public class ZombieController : MonoBehaviour
         zomAttack = GetComponent<ZombieAttack>();
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+        state = ZombieStates.SPAWNING;
         DisableRagdoll();
     }
 

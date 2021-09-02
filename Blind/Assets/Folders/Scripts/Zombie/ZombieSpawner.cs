@@ -27,10 +27,13 @@ public class ZombieSpawner : MonoBehaviour
 
         GameObject spawnedZom = Instantiate(zombiePrefab, spawnLocations[i].position, spawnLocations[i].rotation);
         spawnedZombies.Add(spawnedZom);
-        spawnedZom.GetComponent<ZombieController>().OnDeath.AddListener(OnZombieKilled);
+        var zomCon = spawnedZom.GetComponent<ZombieController>();
+        zomCon.OnDeath.AddListener(OnZombieKilled);
+
+
         spawnedZom.GetComponent<Animator>().SetTrigger("RunJump");
 
-        AnimateJump(spawnedZom.transform, spawnLocations[i].GetChild(0).position);
+        AnimateJump(spawnedZom.transform, spawnLocations[i].GetChild(0).position, zomCon);
         OnZombieSpawned?.Invoke(spawnedZom);
     }
 
@@ -41,8 +44,8 @@ public class ZombieSpawner : MonoBehaviour
         zomOb.GetComponent<ZombieController>().OnDeath.RemoveListener(OnZombieKilled);
     }
 
-    void AnimateJump(Transform tran, Vector3 landingPos)
+    void AnimateJump(Transform tran, Vector3 landingPos, ZombieController zomCon)
     {
-        tran.DOJump(landingPos, jumpPower, 0, dur);
+        tran.DOJump(landingPos, jumpPower, 0, dur).OnComplete(() => zomCon.SetState(ZombieStates.CHASING));
     }
 }

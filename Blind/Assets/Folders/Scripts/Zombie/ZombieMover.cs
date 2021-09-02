@@ -7,6 +7,7 @@ using EasyButtons;
 public class ZombieMover : MonoBehaviour
 {
     [SerializeField] ZombieController zomCom;
+    [SerializeField] CharacterController cc;
     [SerializeField] float avoidanceRadius = 2;
     [SerializeField] float avoidanceIntensity = 3;
     [SerializeField] float moveDampen = 1;
@@ -16,8 +17,11 @@ public class ZombieMover : MonoBehaviour
     Vector3 avoidanceTamed;
     Vector3 rot;
 
+    Vector3 lastPos;
+
     void OnEnable()
     {
+        lastPos = transform.position;
         agent.updatePosition = false;
         agent.updateRotation = false;
     }
@@ -32,11 +36,19 @@ public class ZombieMover : MonoBehaviour
         Vector3 avoidanceVec = GetAvoidanceVector();
 
         avoidanceTamed = Vector3.Lerp(avoidanceTamed, avoidanceVec, avoidanceIntensity * Time.deltaTime);
-        transform.position = Vector3.Lerp(transform.position, agentDesiredPos + avoidanceTamed, moveDampen * Time.deltaTime);  // Moving
-        //transform.position = agentDesiredPos + avoidanceTamed;    // No dampening
+        //Vector3 abba = Vector3.Lerp(transform.position, agentDesiredPos + avoidanceTamed, moveDampen * Time.deltaTime);  // Moving
+        Vector3 abba = agentDesiredPos + avoidanceTamed;    // No dampening
+
+
+        cc.Move(abba - lastPos);
 
         if (agent.velocity != Vector3.zero)
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(agent.velocity), zomCom.rotSpeed * Time.deltaTime);
+    }
+
+    void LateUpdate()
+    {
+        lastPos = transform.position;
     }
 
     [Button]
