@@ -101,6 +101,7 @@ public class ZombieController : MonoBehaviour
         SetState(ZombieStates.DEAD);
         EnableRagdoll();
         OnDeath?.Invoke(gameObject);
+        AnimateDespawn();
     }
 
     void EnableRagdoll()
@@ -125,7 +126,6 @@ public class ZombieController : MonoBehaviour
             }
         }
         DOVirtual.DelayedCall(5, FreezeRagdoll);
-
     }
 
     void FreezeRagdoll()
@@ -144,14 +144,11 @@ public class ZombieController : MonoBehaviour
                 rb.isKinematic = true;
             }
         }
-
-        // TODO: add timer then despawn.
-        DOVirtual.DelayedCall(3, AnimateDespawn);
     }
 
     void AnimateDespawn()
     {
-
+        GetComponent<ZombieShaderAnimatior>().AnimateFadeOut();
     }
 
     public void DisableRagdoll()
