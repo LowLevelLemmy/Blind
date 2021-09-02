@@ -52,6 +52,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "SwapShader",
+                    "type": "Button",
+                    "id": "a01b25b4-448d-49d1-8593-1d6bac123fb1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -162,6 +170,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c13a8977-0c8e-4084-8ff5-42f3dbed3522",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwapShader",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

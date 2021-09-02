@@ -43,7 +43,7 @@ Material:
     m_Floats:
     - Contrast: 1
     - Height: 1080
-    - Res: 30
+    - Res: 70
     - SpriteSheetCount: 50
     - Width: 1920
     m_Colors: []

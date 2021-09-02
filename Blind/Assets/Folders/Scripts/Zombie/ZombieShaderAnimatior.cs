@@ -7,7 +7,7 @@ using DG.Tweening;
 public class ZombieShaderAnimatior : MonoBehaviour
 {
     [SerializeField] Renderer render;
-    [SerializeField] float fadeDur = 3;
+    [SerializeField] float fadeDur = 1.5f;
 
     [Button]
     public void AnimateFadeOut()
