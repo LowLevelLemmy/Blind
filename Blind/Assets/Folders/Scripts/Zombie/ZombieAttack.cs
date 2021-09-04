@@ -18,7 +18,7 @@ public class ZombieAttack : MonoBehaviour
 
     ZombieController zomCom;
     Animator anim;
-    float lastAttackTime = -999;
+    public float lastAttackTime = -999;
 
     void OnEnable()
     {
@@ -28,7 +28,6 @@ public class ZombieAttack : MonoBehaviour
 
     public void AnimateAttack()
     {
-        print("Animating Attack");
         lastAttackTime = Time.time;
         anim.SetTrigger("Attack");
         DOVirtual.DelayedCall(AttackDur, Attack);
@@ -38,15 +37,20 @@ public class ZombieAttack : MonoBehaviour
     {
         if (zomCom.state != ZombieStates.ATTACKING)
             return;
-        
+
         Collider[] cols = Physics.OverlapSphere(attackPoint.position, attackRadius);
+        bool attacked = false;
         foreach (var col in cols)
         {
             if (col.CompareTag("Player"))
             {
                 var hurtable = col.transform.root.GetComponent<IHurtable>();
-                hurtable.OnHurt();
+                hurtable.OnHurt(gameObject);
+                attacked = true;
             }
+
+            if (attacked)
+                return;
         }
     }
 

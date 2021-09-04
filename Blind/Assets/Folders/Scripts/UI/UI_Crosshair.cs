@@ -20,12 +20,26 @@ public class UI_Crosshair : MonoBehaviour   // handles center of the canvas pret
         plrInteractor.OnInteractableLookedAt += OnInteractableLookedAt;
         plrInteractor.OnLostSightOfInteractable += OnLostSightOfInteractable;
 
-        grabIcon.SetActive(false);
 
         wepMan.OnWeaponEquiped.AddListener(OnWeaponEquiped);
         wepMan.OnWeaponUnEquiped.AddListener(OnWeaponUnEquiped);
+        plrCon.plrHealth.OnPlayerDied.AddListener(OnPlrDeath);
 
+        grabIcon.SetActive(false);
         ShowDot();
+    }
+
+    public void HideAll()
+    {
+        print("hiding all");
+        dot.SetActive(false);
+        grabIcon.SetActive(false);
+        crossHair.SetActive(false);
+    }
+
+    void OnPlrDeath()
+    {
+        HideAll();
     }
 
     void OnDisable()
@@ -37,6 +51,8 @@ public class UI_Crosshair : MonoBehaviour   // handles center of the canvas pret
 
     void OnInteractableLookedAt()
     {
+        if (plrCon.CmpState(PlayerStates.DEAD))
+            return;
         if (plrCon.weaponManager.state == WepManState.NONE)
             grabIcon.SetActive(true);   // display hand img
     }
@@ -62,12 +78,16 @@ public class UI_Crosshair : MonoBehaviour   // handles center of the canvas pret
 
     void ShowCrosshair()
     {
+        if (plrCon.CmpState(PlayerStates.DEAD))
+            return;
         dot.SetActive(false);
         crossHair.SetActive(true);
     }
 
     void ShowDot()
     {
+        if (plrCon.CmpState(PlayerStates.DEAD))
+            return;
         dot.SetActive(true);
         crossHair.SetActive(false);
     }

@@ -36,23 +36,23 @@ public class WeaponManager : MonoBehaviour
 
     void Update()
     {
+        if (plrCon.CmpState(PlayerStates.DEAD))
+            return;
+
         if (plrCon.input_Fire && state == WepManState.READY)
-        {
             currentWeapon.Fire();
-        }
 
         if (plrCon.input_AltFire && state != WepManState.NONE)
             ThrowCurWeapon();
     }
 
-    void ThrowCurWeapon()
+    public void ThrowCurWeapon()
     {
         if (currentWeapon == null) return;
         currentWeapon.Throw();
         UnEquipWeapon();
     }
 
-    [Button]
     public void EquipWeapon(GameObject weapon)  // no animation
     {
         if (state != WepManState.NONE)  // we're already holding a weapon
@@ -65,7 +65,6 @@ public class WeaponManager : MonoBehaviour
         OnWeaponEquiped?.Invoke(currentWeapon);
     }
 
-    [Button]
     public void UnEquipWeapon() // no animation
     {
         if (currentWeapon == null) return;

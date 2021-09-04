@@ -5,6 +5,7 @@ using EasyButtons;
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 
 public class PlayerHealth : MonoBehaviour, IHurtable
 {
@@ -20,17 +21,17 @@ public class PlayerHealth : MonoBehaviour, IHurtable
     [SerializeField] Color normalVigCol;
     [SerializeField] Color injuredVigColor = Color.red;
 
+    PlayerController plrCon;
+
+    public UnityEvent OnPlayerDied;
+    
     void Start()
     {
+        plrCon = GetComponent<PlayerController>();
         vol.profile.TryGet(out bloom);
         vol.profile.TryGet(out vig);
         normalVigCol = vig.color.value;
         StartCoroutine(Animate());
-    }
-
-    void Update()
-    {
-
     }
 
     IEnumerator Animate()   // horible code
@@ -53,11 +54,12 @@ public class PlayerHealth : MonoBehaviour, IHurtable
         }
     }
 
-    public void OnHurt()
+    public void OnHurt(GameObject inflicter = null)
     {
+        print(inflicter.name);
         if (injured)
         {
-            Die();
+            Die(inflicter);
         }
         else
         {
@@ -68,13 +70,46 @@ public class PlayerHealth : MonoBehaviour, IHurtable
 
     void Recover()
     {
+        if (plrCon.CmpState(PlayerStates.DEAD))
+            return;
+
         if (injured)
             injured = false;
     }
 
-    void Die()
+    [Button]
+    void Die(GameObject inflicter = null)
     {
         print("I DEAD");
-    }
 
+        plrCon.SwitchState(PlayerStates.DEAD);
+        plrCon.weaponManager.ThrowCurWeapon();
+        plrCon.cc.enabled = false;
+
+        Transform head = plrCon.head;
+        head.parent = null;
+        Rigidbody headRb = head.GetComponent<Rigidbody>();
+        Collider headCol = head.GetComponent<Collider>();
+
+        headCol.isTrigger = false;
+        headRb.isKinematic = false;
+
+        if (inflicter)
+        {
+            Vector3 dir = (inflicter.transform.position - transform.position).normalized;
+            dir.y = 0f;
+            headRb.AddForce(dir * 100);
+        }
+
+        OnPlayerDied?.Invoke();
+
+        Destroy(gameObject);
+
+        // Add impulse from zombie hit direction
+        // Pass in the zombie that hurt the player in the Hurt method
+
+        // TODO: WHEN YOU COME BACK... MAKE IT ALL WORK.
+            // Zombies are glitching when they come outta windows
+            // Attacking dosen't seem to have a timer delay.
+    }
 }

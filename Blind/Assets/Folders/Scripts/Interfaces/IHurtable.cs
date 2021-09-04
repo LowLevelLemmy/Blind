@@ -1,4 +1,6 @@
+using UnityEngine;
+
 public interface IHurtable
 {
-    void OnHurt();
+    void OnHurt(GameObject inflicter = null);
 }

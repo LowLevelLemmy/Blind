@@ -2,11 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PlayerStates
+{
+    ALIVE,
+    DEAD
+}
+
 public class PlayerController : MonoBehaviour, IControlable   // holds popular player vars and all scripts
 {
-    //
     //  Like a literal "Controller" set inputs here.
-    //
+
+    PlayerStates state;
 
     public Transform head;
     public Transform plrCamera;
@@ -16,6 +22,10 @@ public class PlayerController : MonoBehaviour, IControlable   // holds popular p
     public PlayerLook playerLook;
     public WeaponManager weaponManager;
     public PlayerInteractor playerInteractioner;
+    public PlayerHealth plrHealth;
+
+    // Other
+    public CharacterController cc;
 
     [Header("Inputs:")]
     public Vector2 input_Move;
@@ -26,14 +36,15 @@ public class PlayerController : MonoBehaviour, IControlable   // holds popular p
     public bool input_Use;
     public bool input_Jump;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         head = transform.GetChild(0);
         playerMovement = GetComponent<PlayerMovement>();
         playerLook = GetComponent<PlayerLook>();
         weaponManager = GetComponent<WeaponManager>();
         playerInteractioner = GetComponent<PlayerInteractor>();
+        plrHealth = GetComponent<PlayerHealth>();
+        cc = GetComponent<CharacterController>();
 
         plrCamera = Camera.main.transform;
     }
@@ -46,5 +57,18 @@ public class PlayerController : MonoBehaviour, IControlable   // holds popular p
         input_Fire = fire;
         input_Use = use;
         input_Jump = jump;
+    }
+
+    public void SwitchState(PlayerStates newState)
+    {
+        state = newState;
+    }
+
+    public bool CmpState(PlayerStates cmpState)
+    {
+        if (state == cmpState)
+            return true;
+        else
+            return false;
     }
 }

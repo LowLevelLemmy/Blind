@@ -23,6 +23,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (plrCon.CmpState(PlayerStates.DEAD))
+            return;
+
         isGrounded = cc.isGrounded;
         if (isGrounded)
             verticleVel.y = -2;

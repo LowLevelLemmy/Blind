@@ -27,6 +27,9 @@ public class PlayerInteractor : MonoBehaviour
 
     void Update()
     {
+        if (plrCon.CmpState(PlayerStates.DEAD))
+            return;
+
         if (Time.time - lastTimeInteracted < interactCoolDown)
             return;
 

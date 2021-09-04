@@ -53,6 +53,6 @@ Material:
     - SpriteSheetCount: 6
     - TEMP: 1.77
     - Width: 1920
-    - mul: 0.1
+    - mul: 0
     m_Colors: []
   m_BuildTextureStacks: []

@@ -11,7 +11,7 @@ public class ZombieHealth : MonoBehaviour, IHurtable
         zomCon = GetComponent<ZombieController>();
     }
 
-    public void OnHurt()
+    public void OnHurt(GameObject inflicter = null)
     {
         zomCon.Die();
     }

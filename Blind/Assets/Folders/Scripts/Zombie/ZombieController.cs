@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using DG.Tweening;
 using UnityEngine.Events;
+using EasyButtons;
 
 public enum ZombieStates
 {
@@ -28,6 +29,7 @@ public class ZombieController : MonoBehaviour
 
     public UnityEvent<GameObject> OnDeath;
 
+    [Button]
     public void SetState(ZombieStates newState)
     {
         if (state != ZombieStates.DEAD)
@@ -69,6 +71,8 @@ public class ZombieController : MonoBehaviour
     void AttackingThink()
     {
         //rotate torward player
+        if (target == null)
+            return;
         Vector3 abba = target.position - transform.position;
         abba.y = 0;
         Quaternion targetRot = Quaternion.LookRotation(abba);
@@ -77,11 +81,15 @@ public class ZombieController : MonoBehaviour
 
     void ChasingThink()
     {
+        if (target == null)
+            return;
         agent.SetDestination(target.position);
         if (Vector3.Distance(transform.position, target.position) <= maxAttackDistance)
         {
             if (zomAttack.CanAttack)
+            {
                 Attack();
+            }
         }
     }
 
