@@ -46,6 +46,6 @@ public class ZombieSpawner : MonoBehaviour
 
     void AnimateJump(Transform tran, Vector3 landingPos, ZombieController zomCon)
     {
-        tran.DOJump(landingPos, jumpPower, 0, dur).OnComplete(() => zomCon.SetState(ZombieStates.CHASING));
+        tran.DOJump(landingPos, jumpPower, 0, dur).OnComplete(zomCon.StartChasing);
     }
 }

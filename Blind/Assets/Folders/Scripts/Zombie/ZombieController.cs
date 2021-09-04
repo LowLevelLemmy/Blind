@@ -43,6 +43,7 @@ public class ZombieController : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         state = ZombieStates.SPAWNING;
+        agent.enabled = false;
         DisableRagdoll();
     }
 
@@ -101,8 +102,9 @@ public class ZombieController : MonoBehaviour
         DOVirtual.DelayedCall(zomAttack.attackCooldown, StartChasing);
     }
 
-    void StartChasing()
+    public void StartChasing()
     {
+        agent.enabled = true;
         SetState(ZombieStates.CHASING);
     }
 
@@ -164,7 +166,6 @@ public class ZombieController : MonoBehaviour
     public void DisableRagdoll()
     {
         anim.enabled = true;
-        agent.enabled = true;
 
         Collider[] cols = gameObject.GetComponentsInChildren<Collider>();
         foreach (var c in cols)

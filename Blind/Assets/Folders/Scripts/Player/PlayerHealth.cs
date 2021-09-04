@@ -4,7 +4,6 @@ using UnityEngine.Rendering.Universal;
 using EasyButtons;
 using DG.Tweening;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.Events;
 
 public class PlayerHealth : MonoBehaviour, IHurtable
@@ -56,7 +55,6 @@ public class PlayerHealth : MonoBehaviour, IHurtable
 
     public void OnHurt(GameObject inflicter = null)
     {
-        print(inflicter.name);
         if (injured)
         {
             Die(inflicter);
