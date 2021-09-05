@@ -59,6 +59,7 @@ public class ZombieMover : MonoBehaviour
         foreach(var zom in zoms)
         {
             Vector3 vecAway = (transform.position - zom.position);
+            vecAway.y = 0;
             avoidanceVec += vecAway;
         }
         return avoidanceVec.normalized;

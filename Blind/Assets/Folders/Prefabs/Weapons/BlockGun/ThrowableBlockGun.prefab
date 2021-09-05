@@ -128,8 +128,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 484385cc885d0c5498747a64fbbc6e11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupableWeapon: {fileID: 1057220552267244890, guid: 2a78259d8c1781240832dc5d03e3b565, type: 3}
   maxDistance: 4
+  pickupableWeapon: {fileID: 1057220552267244890, guid: 2a78259d8c1781240832dc5d03e3b565, type: 3}
+  ammo: -1
 --- !u!114 &2513247478439743299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,6 +146,8 @@ MonoBehaviour:
   ignoredLayers:
     serializedVersion: 2
     m_Bits: 0
+  shatterParticles: {fileID: 7791905466285925699, guid: b3d1908a50608a7409beabdd82105f60, type: 3}
+  destroyOnImpact: 1
 --- !u!1 &6786308923775851175
 GameObject:
   m_ObjectHideFlags: 0

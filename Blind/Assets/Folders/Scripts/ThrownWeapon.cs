@@ -5,6 +5,8 @@ using UnityEngine;
 public class ThrownWeapon : MonoBehaviour
 {
     [SerializeField] LayerMask ignoredLayers;
+    [SerializeField] GameObject shatterParticles;
+    [SerializeField] bool destroyOnImpact;
     bool deadily = true;
 
     void OnEnable()
@@ -21,8 +23,17 @@ public class ThrownWeapon : MonoBehaviour
 
         var hurtable = col.transform.root.GetComponent<IHurtable>();
 
-        if (deadily)
+        if (deadily && hurtable != null)
+        {
+            print("ABBABABAB!");
             hurtable?.OnHurt();
+            if (destroyOnImpact)
+            {
+                print("ABBA!");
+                Instantiate(shatterParticles, transform.position, Quaternion.identity);
+                Destroy(gameObject);
+            }
+        }
 
         deadily = false;    // this way, it's deadily until it collides with something.
     }
