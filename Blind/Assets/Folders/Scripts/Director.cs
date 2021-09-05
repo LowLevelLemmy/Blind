@@ -52,7 +52,7 @@ public class Director : MonoBehaviour
 
     void SpawnZom()
     {
-        zomSpawner.SpawnZombie();
+        //zomSpawner.SpawnZombie();
         --zomsLeftToSpawn;
     }
 

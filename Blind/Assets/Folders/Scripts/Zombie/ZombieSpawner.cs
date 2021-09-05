@@ -8,7 +8,7 @@ using DG.Tweening;
 public class ZombieSpawner : MonoBehaviour
 {
     [Header("Settings")]
-    [SerializeField] List<Transform> spawnLocations = new List<Transform>();
+    [SerializeField] List<Transform> spawnRooms = new List<Transform>();
     [SerializeField] GameObject zombiePrefab;
     public List<GameObject> spawnedZombies = new List<GameObject>();
 
@@ -20,12 +20,11 @@ public class ZombieSpawner : MonoBehaviour
 
 
     [Button]
-    public void SpawnZombie(int i = -999)
+    public void SpawnZombie(int roomIndex, int windowIndex)
     {
-        if (i == -999)  // do random value if I is null
-            i = Random.Range(0, spawnLocations.Count);
+        Transform spawnTrans = spawnRooms[roomIndex].GetChild(windowIndex);
 
-        GameObject spawnedZom = Instantiate(zombiePrefab, spawnLocations[i].position, spawnLocations[i].rotation);
+        GameObject spawnedZom = Instantiate(zombiePrefab, spawnTrans.position, spawnTrans.rotation);
         spawnedZombies.Add(spawnedZom);
         var zomCon = spawnedZom.GetComponent<ZombieController>();
         zomCon.OnDeath.AddListener(OnZombieKilled);
@@ -33,7 +32,7 @@ public class ZombieSpawner : MonoBehaviour
 
         spawnedZom.GetComponent<Animator>().SetTrigger("RunJump");
 
-        AnimateJump(spawnedZom.transform, spawnLocations[i].GetChild(0).position, zomCon);
+        AnimateJump(spawnedZom.transform, spawnTrans.GetChild(0).position, zomCon);
         OnZombieSpawned?.Invoke(spawnedZom);
     }
 
