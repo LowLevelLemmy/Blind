@@ -6,6 +6,7 @@ using DG.Tweening;
 using UnityEngine.Events;
 using EasyButtons;
 
+[System.Serializable]
 public enum ZombieStates
 {
     SPAWNING,
@@ -18,6 +19,7 @@ public class ZombieController : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] float maxAttackDistance = 1;
+    [SerializeField] ZombieStates startingState;
     public float rotSpeed = 6;
 
     public NavMeshAgent agent;
@@ -42,9 +44,12 @@ public class ZombieController : MonoBehaviour
         zomAttack = GetComponent<ZombieAttack>();
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
-        state = ZombieStates.SPAWNING;
         agent.enabled = false;
         DisableRagdoll();
+        if (startingState == ZombieStates.CHASING)
+            StartChasing();
+        else
+            state = ZombieStates.SPAWNING;
     }
 
     void Update()
