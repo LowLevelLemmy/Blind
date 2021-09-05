@@ -11,9 +11,10 @@ public class PickupableWeapon : MonoBehaviour, IInteractable
     public int ammo = -1;   // if ammo is -1 then use default ammo
 
     public float maxDist => maxDistance;
-    public Vector3 pos => transform.position;
+    public GameObject self => gameObject;
     string pickUpForTheFirstTimeTxt => "Hold F to pickup " + "Weapon";  // pickupableWeapon
     public string interactTxt { get => pickUpForTheFirstTimeTxt; }
+    public bool altUse => false;
 
     public void OnInteractedWith(PlayerInteractor plrInteractor)
     {

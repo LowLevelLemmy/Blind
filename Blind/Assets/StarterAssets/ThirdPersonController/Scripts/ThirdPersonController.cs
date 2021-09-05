@@ -93,7 +93,7 @@ namespace StarterAssets
 			_fallTimeoutDelta = FallTimeout;
 		}
 
-		public void SetInputs(Vector2 move, Vector2 lookDelt, bool fire, bool altFire, bool use, bool jump)
+		public void SetInputs(Vector2 move, Vector2 lookDelt, bool fire, bool altFire, bool use, bool jump, bool altUse)
 		{
 			input_Move = move;
 			input_LookDelta = lookDelt;

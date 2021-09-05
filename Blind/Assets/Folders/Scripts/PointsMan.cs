@@ -7,7 +7,7 @@ public class PointsMan : MonoBehaviour
 {
     public static PointsMan instance;
     [SerializeField] TextMeshProUGUI pointsTxt;
-    int playerPoints = 0;
+    public int playerPoints = 0;
 
     void Awake()
     {

@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour, IControlable   // holds popular p
     public bool input_AltFire;
     public bool input_Use;
     public bool input_Jump;
+    public bool input_AltUse;
 
     void Awake()
     {
@@ -49,7 +50,7 @@ public class PlayerController : MonoBehaviour, IControlable   // holds popular p
         plrCamera = Camera.main.transform;
     }
 
-    public void SetInputs(Vector2 move, Vector2 lookDelt, bool fire, bool altFire, bool use, bool jump)
+    public void SetInputs(Vector2 move, Vector2 lookDelt, bool fire, bool altFire, bool use, bool jump, bool altUse)
     {
         input_Move = move;
         input_LookDelta = lookDelt;
@@ -57,6 +58,7 @@ public class PlayerController : MonoBehaviour, IControlable   // holds popular p
         input_Fire = fire;
         input_Use = use;
         input_Jump = jump;
+        input_AltUse = altUse;
     }
 
     public void SwitchState(PlayerStates newState)

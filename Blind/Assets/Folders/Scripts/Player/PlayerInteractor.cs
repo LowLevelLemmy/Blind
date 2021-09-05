@@ -39,17 +39,20 @@ public class PlayerInteractor : MonoBehaviour
         {
             if (hit.collider.TryGetComponent<IInteractable>(out var interactable))
             {
-                if (!InRange(interactable))
+                if (!InRange(interactable)) // if not in range
                     return;
 
                 lookingAtInteractable = true;
 
-                if (plrCon.input_Use)   // INTERACTED WITH!
+                bool input = interactable.altUse ? plrCon.input_AltUse : plrCon.input_Use;
+                if (input)   // INTERACTED WITH!
                     interactable.OnInteractedWith(this);
 
                 interactable.OnLookedAt(this);
                 OnInteractableLookedAt?.Invoke();
-                OnInteractTxtShouldComeUpNow?.Invoke(interactable);
+
+                if (interactable.altUse)
+                    OnInteractTxtShouldComeUpNow?.Invoke(interactable);
             }
             else
                 lookingAtInteractable = false;
@@ -68,7 +71,7 @@ public class PlayerInteractor : MonoBehaviour
 
     bool InRange(IInteractable interactable)
     {
-        float dist = Vector3.Distance(transform.position, interactable.pos);
+        float dist = Vector3.Distance(transform.position, interactable.self.transform.position);
         return dist <= interactable.maxDist;    // distance check
     }
 }

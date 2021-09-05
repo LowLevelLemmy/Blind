@@ -22,11 +22,11 @@ public class ZombieSpawner : MonoBehaviour
     [Button]
     public void SpawnZombie(int roomIndex = -1, int windowIndex = -1)
     {
-        if (roomIndex == -1 || windowIndex == -1)
-        {
+        if (roomIndex == -1)
             roomIndex = Random.Range(0, spawnRooms.Count);
+
+        if (windowIndex == -1)
             windowIndex = Random.Range(0, spawnRooms[roomIndex].childCount);
-        }
 
         Transform spawnTrans = spawnRooms[roomIndex].GetChild(windowIndex);
 

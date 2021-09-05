@@ -19,7 +19,7 @@ public class ZombieBrain : MonoBehaviour
     void Update()
     {
         MoveTorwardPlayer();
-        con.SetInputs(move, lookDelta, fire, altFire, use, jump);
+        con.SetInputs(move, lookDelta, fire, altFire, use, jump, false);
     }
 
     void MoveTorwardPlayer()

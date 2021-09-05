@@ -3,11 +3,13 @@ using UnityEngine;
 using UnityEngine.Events;
 using DG.Tweening;
 using EasyButtons;
+using System.Collections.Generic;
 
 public class Director : MonoBehaviour
 {
     [Header("SETTINGS:")]
     [SerializeField] int zomsLeftToSpawn;
+    public List<int> unlockedRoomIndexs = new List<int>();  // used by doors to add room indexes to spawn zombies from
     public int currentRound = 0;
 
     public UnityEvent OnNewRound;
@@ -54,7 +56,9 @@ public class Director : MonoBehaviour
 
     void SpawnZom()
     {
-        zomSpawner.SpawnZombie();
+        int roomIndex = Random.Range(0, unlockedRoomIndexs.Count);
+        print("index: " + roomIndex);
+        zomSpawner.SpawnZombie(roomIndex);
         --zomsLeftToSpawn;
     }
 

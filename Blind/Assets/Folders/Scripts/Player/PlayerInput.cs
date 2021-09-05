@@ -11,6 +11,7 @@ public class PlayerInput : MonoBehaviour
     public bool fire;
     public bool altFire;
     public bool use;
+    public bool altUse;
     public bool jump;
 
     IControlable con;   // short for controller :)
@@ -22,7 +23,7 @@ public class PlayerInput : MonoBehaviour
 
     void Update()
     {
-        con.SetInputs(move, lookDelta, fire, altFire, use, jump);
+        con.SetInputs(move, lookDelta, fire, altFire, use, jump, altUse);
     }
 
     void LateUpdate()
@@ -31,6 +32,7 @@ public class PlayerInput : MonoBehaviour
         altFire = false;
         use = false;
         jump = false;
+        altUse = false;
     }
 
     void OnMove(InputValue context)
@@ -61,5 +63,10 @@ public class PlayerInput : MonoBehaviour
     void OnJump(InputValue context)
     {
         jump = context.isPressed;
+    }
+
+    void OnAltUse(InputValue context)
+    {
+        altUse = context.isPressed;
     }
 }
