@@ -53,13 +53,18 @@ public class WeaponManager : MonoBehaviour
         UnEquipWeapon();
     }
 
-    public void EquipWeapon(GameObject weapon)  // no animation
+    public void EquipWeapon(PickupableWeapon pickupableWep)  // no animation
     {
         if (state != WepManState.NONE)  // we're already holding a weapon
             return;
 
         state = WepManState.SWAPPING;
-        currentWeapon = Instantiate(weapon, weaponParent).GetComponent<AbstractWeapon>();
+        currentWeapon = Instantiate(pickupableWep.pickupableWeapon, weaponParent).GetComponent<AbstractWeapon>();
+
+        if (pickupableWep.ammo != -1)
+            currentWeapon.ammo = pickupableWep.ammo;
+
+
         currentWeapon.owner = this;
         currentWeapon.TakeOutWeapon(OnWeaponReady); // animation
         OnWeaponEquiped?.Invoke(currentWeapon);

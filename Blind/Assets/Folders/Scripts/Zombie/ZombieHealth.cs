@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ZombieHealth : MonoBehaviour, IHurtable
 {
+    [SerializeField] int pointsPerKill = 50;
     ZombieController zomCon;
 
     void Start()
@@ -13,6 +14,7 @@ public class ZombieHealth : MonoBehaviour, IHurtable
 
     public void OnHurt(GameObject inflicter = null)
     {
+        PointsMan.instance.AddPoints(pointsPerKill);
         zomCon.Die();
     }
 }

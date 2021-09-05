@@ -124,8 +124,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 513
   shouldDisplayCrosshair: 1
+  ammo: 3
   owner: {fileID: 0}
-  bulletPrefab: {fileID: 7256256912309127628, guid: 82be6cfe990b02845a26f6e23d0db38d, type: 3}
 --- !u!1 &1057220552887158102
 GameObject:
   m_ObjectHideFlags: 0

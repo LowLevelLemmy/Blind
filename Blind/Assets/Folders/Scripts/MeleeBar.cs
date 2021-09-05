@@ -15,7 +15,6 @@ public class MeleeBar : AbstractWeapon
         Vector3 bulletDirection = playerCam.forward;
         if (Physics.Raycast(playerCam.position, bulletDirection, out hit, swingRange, layerMask, QueryTriggerInteraction.Ignore))
         {
-            print("Swing hit: " + hit.transform.root.name);
             var hurtable = hit.transform.root.GetComponent<IHurtable>();
             hurtable?.OnHurt();
         }

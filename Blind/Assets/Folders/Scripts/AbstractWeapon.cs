@@ -14,6 +14,7 @@ public abstract class AbstractWeapon : MonoBehaviour
     [SerializeField] protected float throwForce = 10f;
     [SerializeField] protected LayerMask layerMask;
     [SerializeField] public bool shouldDisplayCrosshair;
+    [SerializeField] public int ammo = 3;
 
     public WeaponManager owner;
 
@@ -31,6 +32,7 @@ public abstract class AbstractWeapon : MonoBehaviour
     {
         Vector3 spawnPos = playerCam.position + (playerCam.forward * 0.3f) + (playerCam.up * 0.1f);
         Rigidbody rb = Instantiate(throwableWeapon, spawnPos, Random.rotation).GetComponent<Rigidbody>();
+        rb.GetComponent<PickupableWeapon>().ammo = ammo;
 
         Vector3 forceVec = playerCam.forward * throwForce;
         rb.AddForce(forceVec, ForceMode.Impulse);

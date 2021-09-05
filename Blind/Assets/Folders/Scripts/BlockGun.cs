@@ -10,6 +10,12 @@ public class BlockGun : AbstractWeapon
         if (!canFire)
             return;
 
+        if (ammo <= 0)
+            return;
+
+        --ammo;
+        print(ammo);
+
         RaycastHit hit;
         Vector3 bulletDirection = playerCam.forward;
         if (Physics.Raycast(playerCam.position, bulletDirection, out hit, 1000, layerMask, QueryTriggerInteraction.Ignore))

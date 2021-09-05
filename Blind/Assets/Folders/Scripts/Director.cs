@@ -1,16 +1,18 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using DG.Tweening;
+using EasyButtons;
 
 public class Director : MonoBehaviour
 {
     [Header("SETTINGS:")]
-    [SerializeField] int currentRound = 0;
-    [SerializeField] int zomsOnRound1 = 5;
     [SerializeField] int zomsLeftToSpawn;
-    [SerializeField] int maxZombiesAlive= 3;
-    [SerializeField] float delayFactor = 3;
+    public int currentRound = 0;
+
+    public UnityEvent OnNewRound;
+
+    int maxZombiesAlive => Mathf.CeilToInt(24 * Mathf.Clamp01(.2f * currentRound));
 
     ZombieSpawner zomSpawner;
 
@@ -20,7 +22,7 @@ public class Director : MonoBehaviour
     {
         zomSpawner = GetComponent<ZombieSpawner>();
         zomSpawner.OnZombieRemoved.AddListener(OnZombieRemoved);
-        StartNewRound();
+        DOVirtual.DelayedCall(1, StartNewRound);
     }
 
     void OnZombieRemoved(GameObject zom)
@@ -38,13 +40,13 @@ public class Director : MonoBehaviour
     {
         while (zomsLeftToSpawn > 0)
         {
-            if (zombiesAlive >= maxZombiesAlive)    // if we aren't at MAX CAPACITY
+            while (zombiesAlive >= maxZombiesAlive)    // if we are at MAX CAPACITY
             {
                 yield return new WaitForSeconds(3f);
                 continue;
             }
 
-            float delayBetweenZoms = (Random.value + .1f) * delayFactor;
+            float delayBetweenZoms = (Random.value + .1f) * 5;
             SpawnZom();
             yield return new WaitForSeconds(delayBetweenZoms);
         }
@@ -52,17 +54,17 @@ public class Director : MonoBehaviour
 
     void SpawnZom()
     {
-        //zomSpawner.SpawnZombie();
+        zomSpawner.SpawnZombie();
         --zomsLeftToSpawn;
     }
 
-
+    [Button]
     void StartNewRound()
     {
         ++currentRound;
-        print("NEW ROUND: " + currentRound);
-        zomsLeftToSpawn += zomsOnRound1 * currentRound;
-        delayFactor *= .99f;
-        SpawnZoms();
+        OnNewRound?.Invoke();
+        zomsLeftToSpawn = Mathf.CeilToInt(0.15f * currentRound * 24 + 2);
+        print("NEW ROUND: " + currentRound + "\tAmmount Of Zoms: " + zomsLeftToSpawn + "\tMax Zombies Allowed: " + maxZombiesAlive);
+        DOVirtual.DelayedCall(5, SpawnZoms);
     }
 }
