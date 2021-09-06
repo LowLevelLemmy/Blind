@@ -142,25 +142,6 @@ public class ZombieController : MonoBehaviour
                 rb.isKinematic = false;
             }
         }
-        DOVirtual.DelayedCall(5, FreezeRagdoll);
-    }
-
-    void FreezeRagdoll()
-    {
-        Collider[] cols = gameObject.GetComponentsInChildren<Collider>();
-        foreach (var c in cols)
-        {
-            Rigidbody rb = c.GetComponent<Rigidbody>();
-            if (c.gameObject == gameObject)
-            {
-                c.enabled = true;
-            }
-            else
-            {
-                c.isTrigger = true;
-                rb.isKinematic = true;
-            }
-        }
     }
 
     void AnimateDespawn()

@@ -57,7 +57,6 @@ public class Director : MonoBehaviour
     void SpawnZom()
     {
         int roomIndex = Random.Range(0, unlockedRoomIndexs.Count);
-        print("index: " + roomIndex);
         zomSpawner.SpawnZombie(roomIndex);
         --zomsLeftToSpawn;
     }

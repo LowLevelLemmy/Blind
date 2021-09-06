@@ -25,11 +25,9 @@ public class ThrownWeapon : MonoBehaviour
 
         if (deadily && hurtable != null)
         {
-            print("ABBABABAB!");
             hurtable?.OnHurt();
             if (destroyOnImpact)
             {
-                print("ABBA!");
                 Instantiate(shatterParticles, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }

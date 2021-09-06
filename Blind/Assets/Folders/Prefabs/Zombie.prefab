@@ -614,6 +614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxAttackDistance: 1.2
+  startingState: 0
   rotSpeed: 6
   agent: {fileID: 0}
   target: {fileID: 0}
@@ -644,6 +645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd30ab2e37c7c747b975625716c5d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointsPerKill: 150
 --- !u!114 &896904929966810676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -660,6 +662,7 @@ MonoBehaviour:
   attackFrame: 33
   attackCooldown: 2
   attackPoint: {fileID: 3548379758041671834}
+  lastAttackTime: -999
 --- !u!114 &896904929966810675
 MonoBehaviour:
   m_ObjectHideFlags: 0

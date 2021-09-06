@@ -17,7 +17,6 @@ public class BlockGun : AbstractWeapon
             return;
 
         --ammo;
-        print(ammo);
 
         RaycastHit hit;
         Vector3 bulletDirection = playerCam.forward;
