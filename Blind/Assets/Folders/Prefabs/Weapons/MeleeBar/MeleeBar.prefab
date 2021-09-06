@@ -123,5 +123,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 513
   shouldDisplayCrosshair: 0
+  ammo: 3
   owner: {fileID: 0}
   swingRange: 3
+  particles: {fileID: 7791905466285925699, guid: b3d1908a50608a7409beabdd82105f60, type: 3}
