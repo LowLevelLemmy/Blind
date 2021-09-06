@@ -32,6 +32,7 @@ Transform:
   m_LocalScale: {x: 0.0888582, y: 0.0669513, z: 0.3663831}
   m_Children:
   - {fileID: 1057220552887158103}
+  - {fileID: 3090185416601941273}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -126,6 +127,8 @@ MonoBehaviour:
   shouldDisplayCrosshair: 1
   ammo: 3
   owner: {fileID: 0}
+  muzzle: {fileID: 3090185416601941273}
+  particles: {fileID: 7025733901215733154, guid: 75be0efd4c25e2a458f0e9af007fcf7d, type: 3}
 --- !u!1 &1057220552887158102
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,3 +211,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &3397430214997673944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3090185416601941273}
+  m_Layer: 6
+  m_Name: Muzzle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3090185416601941273
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3397430214997673944}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.678}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1057220552267244838}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

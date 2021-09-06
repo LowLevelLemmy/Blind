@@ -5,6 +5,9 @@ using DG.Tweening;
 
 public class BlockGun : AbstractWeapon
 {
+    [SerializeField] Transform muzzle;
+    [SerializeField] GameObject particles;
+
     public override void Fire()
     {
         if (!canFire)
@@ -24,5 +27,7 @@ public class BlockGun : AbstractWeapon
                 hurtable.OnHurt();
         }
         base.Fire();
+
+        Instantiate(particles, muzzle.position, muzzle.rotation);
     }
 }
