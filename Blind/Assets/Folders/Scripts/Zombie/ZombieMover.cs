@@ -35,7 +35,7 @@ public class ZombieMover : MonoBehaviour
     void CalculateSpeedMultiplier()
     {
         speedMultiplier = Mathf.Clamp01((.2f * dir.currentRound) + .15f);
-
+        speedMultiplier *= Random.Range(.5f, 1f);
         //for (int i = 1; i < 10; ++i)
         //{
         //    print("On Round " + i + ":\t" + ((.2f * i) + .15f));
