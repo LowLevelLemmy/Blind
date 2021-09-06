@@ -9,8 +9,8 @@ public class PlayerInteractor : MonoBehaviour
     [SerializeField] float interactCoolDown = 0.2f;
 
     public UnityAction<IInteractable> OnInteractTxtShouldComeUpNow;
-    public UnityAction OnLostSightOfInteractable;
-    public UnityAction OnInteractableLookedAt;
+    public UnityAction<IInteractable> OnLostSightOfInteractable;    // passed in the interactable we lost sight of
+    public UnityAction<IInteractable> OnInteractableLookedAt;
     public PlayerController plrCon;
 
     float lastTimeInteracted = -999;
@@ -19,6 +19,8 @@ public class PlayerInteractor : MonoBehaviour
 
     bool lookingAtInteractable;
     bool wasLookingAtInteractable;
+
+    IInteractable curInteractableLookingAt = null;
 
     void Awake()
     {
@@ -42,26 +44,37 @@ public class PlayerInteractor : MonoBehaviour
                 if (!InRange(interactable)) // if not in range
                     return;
 
-                lookingAtInteractable = true;
-
+                if (curInteractableLookingAt != interactable)
+                    OnLostSightOfInteractable?.Invoke(curInteractableLookingAt);
                 bool input = interactable.altUse ? plrCon.input_AltUse : plrCon.input_Use;
                 if (input)   // INTERACTED WITH!
                     interactable.OnInteractedWith(this);
 
                 interactable.OnLookedAt(this);
-                OnInteractableLookedAt?.Invoke();
+                OnInteractableLookedAt?.Invoke(interactable);
 
                 if (interactable.altUse)
                     OnInteractTxtShouldComeUpNow?.Invoke(interactable);
+
+                curInteractableLookingAt = interactable;
             }
             else
-                lookingAtInteractable = false;
+            {
+                if (curInteractableLookingAt != null)
+                {
+                    OnLostSightOfInteractable?.Invoke(curInteractableLookingAt);
+                    curInteractableLookingAt = null;
+                }
+            }
         }
         else
-            lookingAtInteractable = false;
-
-        if (wasLookingAtInteractable && !lookingAtInteractable)
-            OnLostSightOfInteractable?.Invoke();
+        {
+            if (curInteractableLookingAt != null)
+            {
+                OnLostSightOfInteractable?.Invoke(curInteractableLookingAt);
+                curInteractableLookingAt = null;
+            }
+        }
     }
 
     void LateUpdate()

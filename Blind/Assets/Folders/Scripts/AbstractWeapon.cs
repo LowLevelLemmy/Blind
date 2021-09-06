@@ -38,6 +38,7 @@ public abstract class AbstractWeapon : MonoBehaviour
         rb.AddForce(forceVec, ForceMode.Impulse);
         rb.AddTorque(ExtensionMethods.RandomVec3(Vector3.one * -800, Vector3.one * 800));   // applied rotation
     }
+
     public virtual void TakeOutWeapon(TweenCallback call)
     {
         GetDependencies();

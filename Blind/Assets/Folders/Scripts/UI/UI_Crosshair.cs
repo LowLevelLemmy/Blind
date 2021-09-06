@@ -49,15 +49,18 @@ public class UI_Crosshair : MonoBehaviour   // handles center of the canvas pret
     }
 
 
-    void OnInteractableLookedAt()
+    void OnInteractableLookedAt(IInteractable interactable)
     {
         if (plrCon.CmpState(PlayerStates.DEAD))
             return;
         if (plrCon.weaponManager.state == WepManState.NONE)
-            grabIcon.SetActive(true);   // display hand img
+        {
+            if (!interactable.altUse)
+                grabIcon.SetActive(true);   // display hand img
+        }
     }
 
-    void OnLostSightOfInteractable()
+    void OnLostSightOfInteractable(IInteractable interactable)
     {
         // hide hand img
         grabIcon.SetActive(false);

@@ -19,7 +19,7 @@ public class UI_DoorText : MonoBehaviour
         doorTxt.text = interactable.interactTxt;
     }
 
-    void OnLostSight()
+    void OnLostSight(IInteractable interactable)
     {
         doorTxt.text = "";
     }
