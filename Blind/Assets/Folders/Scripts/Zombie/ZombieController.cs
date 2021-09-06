@@ -109,6 +109,8 @@ public class ZombieController : MonoBehaviour
 
     public void StartChasing()
     {
+        if (agent == null)
+            return;
         agent.enabled = true;
         SetState(ZombieStates.CHASING);
     }

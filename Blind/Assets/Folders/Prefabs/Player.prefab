@@ -222,12 +222,15 @@ MonoBehaviour:
   playerLook: {fileID: 0}
   weaponManager: {fileID: 0}
   playerInteractioner: {fileID: 0}
+  plrHealth: {fileID: 0}
+  cc: {fileID: 0}
   input_Move: {x: 0, y: 0}
   input_LookDelta: {x: 0, y: 0}
   input_Fire: 0
   input_AltFire: 0
   input_Use: 0
   input_Jump: 0
+  input_AltUse: 0
 --- !u!114 &8966418441031575845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,6 +248,7 @@ MonoBehaviour:
   fire: 0
   altFire: 0
   use: 0
+  altUse: 0
   jump: 0
 --- !u!114 &8966418441031575841
 MonoBehaviour:
@@ -357,6 +361,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0281685c288ae494492c6188be44e7db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  injured: 0
+  vigColorSpeed: 5
+  vol: {fileID: 0}
+  normalVigIntensity: 0.46
+  deadVigIntensity: 1
+  normalVigCol: {r: 0, g: 0, b: 0, a: 0}
+  injuredVigColor: {r: 1, g: 0, b: 0, a: 1}
+  OnPlayerDied:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8966418441315861324
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,7 +574,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
-  m_RenderPostProcessing: 1
+  m_RenderPostProcessing: 0
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
