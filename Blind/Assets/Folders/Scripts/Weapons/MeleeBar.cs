@@ -21,7 +21,12 @@ public class MeleeBar : AbstractWeapon
         {
             var hurtable = hit.transform.root.GetComponent<IHurtable>();
             hurtable?.OnHurt();
-            --ammo;
+            if (hurtable != null)
+            {
+                --ammo;
+                Instantiate(bloodParticles, hit.point, Quaternion.identity);
+            }
+
         }
         base.Fire();
 

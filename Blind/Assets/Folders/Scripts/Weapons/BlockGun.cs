@@ -23,7 +23,10 @@ public class BlockGun : AbstractWeapon
         if (Physics.Raycast(playerCam.position, bulletDirection, out hit, 1000, layerMask, QueryTriggerInteraction.Ignore))
         {
             if (hit.transform.root.TryGetComponent<IHurtable>(out var hurtable))
+            {
                 hurtable.OnHurt();
+                Instantiate(bloodParticles, hit.point, Quaternion.identity);
+            }
         }
         base.Fire();
 

@@ -118,6 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   throwableWeapon: {fileID: 6786308923775851168, guid: 2615d191fa5953a4492fb396ceba1626, type: 3}
+  bloodParticles: {fileID: 3508191205655435964, guid: 027df6cb486cfbc45a4e9401f5670d09, type: 3}
   timeBetweenShots: 0.2
   takeOutTime: 0.57
   throwForce: 18

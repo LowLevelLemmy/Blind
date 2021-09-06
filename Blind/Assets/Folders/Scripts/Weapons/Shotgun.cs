@@ -21,11 +21,32 @@ public class Shotgun : AbstractWeapon
 
         Vector3 bulletDirection = playerCam.forward;
         var cols = Physics.SphereCastAll(playerCam.position, radius, bulletDirection, range, layerMask, QueryTriggerInteraction.Ignore);
-        foreach(var col in cols)
+
+        List<IHurtable> enemiesHit = new List<IHurtable>();
+        foreach (var col in cols)
         {
             if (col.transform.root.TryGetComponent<IHurtable>(out var hurtable))
-                hurtable.OnHurt();
+            {
+                if (!enemiesHit.Contains(hurtable))
+                    enemiesHit.Add(hurtable);
+            }
         }
+
+        if (enemiesHit.Count != 0)
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(playerCam.position, bulletDirection, out hit, 1000, layerMask, QueryTriggerInteraction.Ignore))
+            {
+                Instantiate(bloodParticles, hit.point, Quaternion.identity);
+            }
+        }
+
+        foreach (var hurt in enemiesHit)
+        {
+            hurt.OnHurt();
+        }
+
+
 
         base.Fire();
 

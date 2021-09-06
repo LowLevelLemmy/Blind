@@ -3,7 +3,10 @@ guid: 0468a3a4cb5fa374c91ac050911591d1
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - throwableWeapon: {instanceID: 0}
+  - bloodParticles: {fileID: 3508191205655435964, guid: 027df6cb486cfbc45a4e9401f5670d09, type: 3}
+  - owner: {instanceID: 0}
   executionOrder: 300
   icon: {instanceID: 0}
   userData: 

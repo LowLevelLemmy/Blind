@@ -7,6 +7,7 @@ public abstract class AbstractWeapon : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] protected GameObject throwableWeapon;
+    [SerializeField] protected GameObject bloodParticles;
 
     [Header("Settings")]
     [SerializeField] protected float timeBetweenShots;

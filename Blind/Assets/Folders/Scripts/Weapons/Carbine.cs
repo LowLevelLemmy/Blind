@@ -34,6 +34,14 @@ public class Carbine : AbstractWeapon
             }
         }
 
+        if (enemiesHit.Count != 0)
+        {
+            if (Physics.Raycast(playerCam.position, bulletDirection, out hit, 1000, layerMask, QueryTriggerInteraction.Ignore))
+            {
+                Instantiate(bloodParticles, hit.point, Quaternion.identity);
+            }
+        }
+
         foreach(var hurt in enemiesHit)
         {
             if (penCount <= 0)
@@ -42,6 +50,8 @@ public class Carbine : AbstractWeapon
             hurt.OnHurt();
             --penCount;
         }
+
+
         base.Fire();
 
         Instantiate(particles, muzzle.position, muzzle.rotation);
