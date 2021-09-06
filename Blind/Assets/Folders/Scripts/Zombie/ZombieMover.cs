@@ -10,23 +10,38 @@ public class ZombieMover : MonoBehaviour
     [SerializeField] CharacterController cc;
     [SerializeField] float avoidanceRadius = 2;
     [SerializeField] float avoidanceIntensity = 3;
-    [SerializeField] float moveDampen = 1;
+    [SerializeField] public float maxAgentSpeed = 5;
+    [SerializeField] public float speedMultiplier = .4f;
 
     NavMeshAgent agent => zomCom.agent;
-
     Vector3 avoidanceTamed;
     Vector3 rot;
-
     Vector3 lastPos;
+
+    Director dir;
+
 
     void OnEnable()
     {
         lastPos = transform.position;
         agent.updatePosition = false;
         agent.updateRotation = false;
+        dir = FindObjectOfType<Director>();
+        CalculateSpeedMultiplier();
+        agent.speed = maxAgentSpeed * speedMultiplier;
     }
 
-    // Update is called once per frame
+    [Button]
+    void CalculateSpeedMultiplier()
+    {
+        speedMultiplier = Mathf.Clamp01((.2f * dir.currentRound) + .15f);
+
+        //for (int i = 1; i < 10; ++i)
+        //{
+        //    print("On Round " + i + ":\t" + ((.2f * i) + .15f));
+        //}
+    }
+    
     void Update()
     {
         if (zomCom.state != ZombieStates.CHASING)
@@ -36,9 +51,7 @@ public class ZombieMover : MonoBehaviour
         Vector3 avoidanceVec = GetAvoidanceVector();
 
         avoidanceTamed = Vector3.Lerp(avoidanceTamed, avoidanceVec, avoidanceIntensity * Time.deltaTime);
-        //Vector3 abba = Vector3.Lerp(transform.position, agentDesiredPos + avoidanceTamed, moveDampen * Time.deltaTime);  // Moving
         Vector3 abba = agentDesiredPos + avoidanceTamed;    // No dampening
-
 
         cc.Move(abba - lastPos);
 
