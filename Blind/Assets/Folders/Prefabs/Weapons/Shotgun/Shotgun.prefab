@@ -68,7 +68,7 @@ MonoBehaviour:
   throwableWeapon: {fileID: 5740135925875132441, guid: 1fa376349e2da6f4187f2719a3b1b216, type: 3}
   timeBetweenShots: 0.3
   takeOutTime: 0.8
-  throwForce: 15
+  throwForce: 20
   layerMask:
     serializedVersion: 2
     m_Bits: 513
