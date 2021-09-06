@@ -107,6 +107,7 @@ MonoBehaviour:
   owner: {fileID: 0}
   muzzle: {fileID: 1463763127033928047}
   particles: {fileID: 7025733901215733154, guid: 75be0efd4c25e2a458f0e9af007fcf7d, type: 3}
+  penetrationCount: 2
 --- !u!1001 &2730771131154149042
 PrefabInstance:
   m_ObjectHideFlags: 0
