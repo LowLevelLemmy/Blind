@@ -17,6 +17,11 @@ public class PointsMan : MonoBehaviour
             Destroy(gameObject);
     }
 
+    private void OnEnable()
+    {
+        pointsTxt.text = playerPoints.ToString();
+    }
+
     public void AddPoints(int amount)
     {
         playerPoints += amount;
