@@ -74,17 +74,6 @@ public class ZombieController : MonoBehaviour
         }
     }
 
-    void AttackingThink()
-    {
-        //rotate torward player
-        if (target == null)
-            return;
-        Vector3 abba = target.position - transform.position;
-        abba.y = 0;
-        Quaternion targetRot = Quaternion.LookRotation(abba);
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, rotSpeed * Time.deltaTime);
-    }
-
     void ChasingThink()
     {
         if (target == null)
@@ -99,10 +88,22 @@ public class ZombieController : MonoBehaviour
         }
     }
 
+    void AttackingThink()
+    {
+        //rotate torward player
+        if (target == null)
+            return;
+        agent.SetDestination(target.position);
+        Vector3 abba = target.position - transform.position;
+        abba.y = 0;
+        Quaternion targetRot = Quaternion.LookRotation(abba);
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, rotSpeed * Time.deltaTime);
+    }
+
     void Attack()
     {
         SetState(ZombieStates.ATTACKING);
-        agent.destination = transform.position;
+        //agent.destination = transform.position;
         zomAttack.AnimateAttack();
         DOVirtual.DelayedCall(zomAttack.attackCooldown, StartChasing);
     }

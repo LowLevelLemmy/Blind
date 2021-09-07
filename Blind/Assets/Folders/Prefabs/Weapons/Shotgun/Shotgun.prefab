@@ -78,8 +78,8 @@ MonoBehaviour:
   owner: {fileID: 0}
   muzzle: {fileID: 3582034263171465161}
   particles: {fileID: 7025733901215733154, guid: 75be0efd4c25e2a458f0e9af007fcf7d, type: 3}
-  range: 3
-  radius: 3
+  range: 2.5
+  radius: 2
 --- !u!1 &3582034263171465166
 GameObject:
   m_ObjectHideFlags: 0

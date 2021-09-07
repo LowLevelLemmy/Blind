@@ -44,7 +44,7 @@ public class ZombieMover : MonoBehaviour
     
     void Update()
     {
-        if (zomCom.state != ZombieStates.CHASING)
+        if (zomCom.state == ZombieStates.SPAWNING || zomCom.state == ZombieStates.DEAD)
             return;
 
         Vector3 agentDesiredPos = agent.nextPosition;
@@ -52,6 +52,8 @@ public class ZombieMover : MonoBehaviour
 
         avoidanceTamed = Vector3.Lerp(avoidanceTamed, avoidanceVec, avoidanceIntensity * Time.deltaTime);
         Vector3 abba = agentDesiredPos + avoidanceTamed;    // No dampening
+
+        // TODO: add speed slowdown when attacking?
 
         cc.Move(abba - lastPos);
 
