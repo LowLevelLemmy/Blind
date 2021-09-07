@@ -31,12 +31,8 @@ public class WallWeapon : MonoBehaviour, IInteractable
             return;
 
         pMan.AddPoints(price * -1);
-        ThrowWeapon();
-
-        var partSys = Instantiate(particleEffect, weaponSpawnLoc.position, Quaternion.identity).GetComponent<ParticleSystem>();
-        var partSysMainSettings = partSys.main;
-        var renderer = partSys.GetComponent<Renderer>();
-        renderer.material.SetVector("_EmissionColor", Color.white * 5);
+        SpawnWeapon();
+        SpawnParticles();
         visual.SetActive(true);
     }
 
@@ -45,11 +41,19 @@ public class WallWeapon : MonoBehaviour, IInteractable
 
     }
 
-    void ThrowWeapon()
+    void SpawnWeapon()
     {
-        Rigidbody rb = Instantiate(spawnableWeapon, weaponSpawnLoc.position, Quaternion.AngleAxis(90, Vector3.up)).GetComponent<Rigidbody>();
-        Vector3 forceVec = weaponSpawnLoc.forward * throwForce;
+        Rigidbody rb = Instantiate(spawnableWeapon, weaponSpawnLoc.position, weaponSpawnLoc.rotation).GetComponent<Rigidbody>();
+        Vector3 forceVec = -transform.forward * throwForce;
         rb.AddForce(forceVec, ForceMode.Impulse);
-        //rb.AddTorque(ExtensionMethods.RandomVec3(Vector3.one * -800, Vector3.one * 800));   // applied rotation
+    }
+
+
+    void SpawnParticles()
+    {
+        var partSys = Instantiate(particleEffect, weaponSpawnLoc.position, Quaternion.identity).GetComponent<ParticleSystem>();
+        var partSysMainSettings = partSys.main;
+        var renderer = partSys.GetComponent<Renderer>();
+        renderer.material.SetVector("_EmissionColor", Color.white * 5);
     }
 }

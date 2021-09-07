@@ -39,7 +39,10 @@ public class Door : MonoBehaviour, IInteractable
     [Button]
     void UnlockDoor()
     {
-        GetComponent<Collider>().enabled = false;
+        Collider[] cols = GetComponents<Collider>();
+        foreach (var col in cols)
+            col.enabled = false;
+
         GetComponent<NavMeshObstacle>().enabled = false;
         transform.DOLocalMoveY(10, timeItTakesToOpen).OnComplete(() => Destroy(gameObject));
     }
