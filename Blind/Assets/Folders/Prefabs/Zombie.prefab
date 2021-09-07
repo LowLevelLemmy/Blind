@@ -613,7 +613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8af843a275bf2ce42b2c7546809d9700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAttackDistance: 1.2
+  maxAttackDistance: 1.5
   startingState: 0
   rotSpeed: 6
   agent: {fileID: 0}
@@ -679,7 +679,8 @@ MonoBehaviour:
   cc: {fileID: 4350194864776562183}
   avoidanceRadius: 0.7
   avoidanceIntensity: 2.05
-  moveDampen: 1
+  maxAgentSpeed: 4
+  speedMultiplier: 0.2
 --- !u!114 &1012379886984724441
 MonoBehaviour:
   m_ObjectHideFlags: 0

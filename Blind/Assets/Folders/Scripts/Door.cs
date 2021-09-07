@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using DG.Tweening;
 using EasyButtons;
 
@@ -8,6 +9,7 @@ public class Door : MonoBehaviour, IInteractable
 {
     [SerializeField] int pointsToUnlock;
     [SerializeField] int roomIndexToUnlock;
+    [SerializeField] float timeItTakesToOpen = 2;
     bool unlocked = false;
 
     public string interactTxt => "Press F to Open Door [Cost: " + pointsToUnlock + "]";
@@ -26,8 +28,8 @@ public class Door : MonoBehaviour, IInteractable
             return;
 
         pMan.AddPoints(pointsToUnlock * -1);
-        Director dir = GameObject.FindObjectOfType<Director>();
 
+        Director dir = GameObject.FindObjectOfType<Director>();
         if (!dir.unlockedRoomIndexs.Contains(roomIndexToUnlock))    //unlock room so zombies can spawn in it
             dir.unlockedRoomIndexs.Add(roomIndexToUnlock);
 
@@ -37,7 +39,9 @@ public class Door : MonoBehaviour, IInteractable
     [Button]
     void UnlockDoor()
     {
-        transform.DOLocalMoveY(5, 2).OnComplete(() => Destroy(gameObject));
+        GetComponent<Collider>().enabled = false;
+        GetComponent<NavMeshObstacle>().enabled = false;
+        transform.DOLocalMoveY(10, timeItTakesToOpen).OnComplete(() => Destroy(gameObject));
     }
 
     public void OnLookedAt(PlayerInteractor plrInteractor)

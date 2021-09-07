@@ -12,11 +12,15 @@ public class PlayerMovement : MonoBehaviour
 
     CharacterController cc;
     PlayerController plrCon;
+    TimeMan timeMan;
     Vector3 verticleVel;
     bool isGrounded;
 
+    public float moveFactor;
+
     void Start()
     {
+        timeMan = GetComponent<TimeMan>();
         plrCon = GetComponent<PlayerController>();
         cc = GetComponent<CharacterController>();
     }
@@ -40,5 +44,7 @@ public class PlayerMovement : MonoBehaviour
 
         verticleVel.y += gravity * Time.deltaTime;
         cc.Move(verticleVel * Time.deltaTime);
+
+        moveFactor = (move * speed).magnitude / speed;
     }
 }
