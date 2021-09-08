@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UI_PauseMenu : MonoBehaviour
@@ -12,10 +13,12 @@ public class UI_PauseMenu : MonoBehaviour
     public bool paused = false;
     float previousTimescale;
     PlayerLook plrLook;
+    PlayerHealth plrHealth;
 
     void Start()
     {
         plrLook = FindObjectOfType<PlayerLook>();
+        plrHealth = FindObjectOfType<PlayerHealth>();
     }
 
     void OnEnable()
@@ -25,8 +28,15 @@ public class UI_PauseMenu : MonoBehaviour
 
     void OnPause()
     {
+        if (plrHealth.dead) return;
         paused = !paused;
         PauseOrUnPause(paused);
+    }
+
+    void OnRestart()
+    {
+        if (paused)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     void PauseOrUnPause(bool paused)

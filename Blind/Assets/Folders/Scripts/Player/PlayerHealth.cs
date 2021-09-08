@@ -23,7 +23,9 @@ public class PlayerHealth : MonoBehaviour, IHurtable
     PlayerController plrCon;
 
     public UnityEvent OnPlayerDied;
-    
+
+    public bool dead = false;
+
     void Start()
     {
         plrCon = GetComponent<PlayerController>();
@@ -100,6 +102,7 @@ public class PlayerHealth : MonoBehaviour, IHurtable
         }
 
         OnPlayerDied?.Invoke();
+        dead = true;
 
         Destroy(gameObject);
 

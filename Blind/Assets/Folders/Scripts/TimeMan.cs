@@ -10,6 +10,7 @@ public class TimeMan : MonoBehaviour
     PlayerMovement plrMov;
     float targetTimeScale;
     float timescal;
+    bool dead = false;
 
     UI_PauseMenu pauseMenu;
 
@@ -17,11 +18,18 @@ public class TimeMan : MonoBehaviour
     {
         pauseMenu = FindObjectOfType<UI_PauseMenu>();   // it's stupid... but it's working
         plrMov = FindObjectOfType<PlayerMovement>();
+        FindObjectOfType<PlayerHealth>().OnPlayerDied.AddListener(OnDeath);
+    }
+
+    void OnDeath()
+    {
+        dead = true;
+        Time.timeScale = 1;
     }
 
     void Update()
     {
-        if (pauseMenu.paused)
+        if (pauseMenu.paused || dead)
             return;
 
         targetTimeScale = plrMov.moveFactor;
