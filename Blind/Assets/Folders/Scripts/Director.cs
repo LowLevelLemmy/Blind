@@ -22,10 +22,13 @@ public class Director : MonoBehaviour
     int zomsLeftToSpawn;
     int zombiesAlive => zomSpawner.spawnedZombies.Count;
 
-    private void OnEnable()
+    UI_IntroAnimator introAnimator;
+
+    void OnEnable()
     {
         zomSpawner = GetComponent<ZombieSpawner>();
         zomSpawner.OnZombieRemoved.AddListener(OnZombieRemoved);
+        introAnimator = FindObjectOfType<UI_IntroAnimator>();
     }
 
     void OnZombieRemoved(GameObject zom)
@@ -34,7 +37,7 @@ public class Director : MonoBehaviour
         {
             // TODO: play omonious music here
             DOTween.defaultTimeScaleIndependent = true;
-            DOVirtual.DelayedCall(delayAfterKillingLastZom, StartNewRound);
+            DOVirtual.DelayedCall(delayAfterKillingLastZom, introAnimator.AnimateIntro1);
             DOTween.defaultTimeScaleIndependent = false;
         }
     }

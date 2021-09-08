@@ -19,7 +19,7 @@ TagManager:
   - Interactable
   - Enemy
   - IgnoreRagdolling
-  - 
+  - ColPlayer
   - 
   - 
   - 

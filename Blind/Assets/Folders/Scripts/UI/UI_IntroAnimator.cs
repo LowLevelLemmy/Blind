@@ -29,7 +29,7 @@ public class UI_IntroAnimator : MonoBehaviour
     }
 
     [Button]
-    void AnimateIntro1()
+    public void AnimateIntro1()
     {
         DOTween.defaultTimeScaleIndependent = true;
         roundsUI.DOMove(destination.position, dur1);
