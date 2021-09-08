@@ -45,6 +45,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - ALPHA: 0
     - Contrast: 1
     - Height: 1080
     - Mul: 0.1

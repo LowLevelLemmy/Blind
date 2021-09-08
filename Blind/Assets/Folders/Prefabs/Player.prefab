@@ -265,6 +265,7 @@ MonoBehaviour:
   gravity: -9.81
   jumpHeight: 2
   speed: 4
+  moveFactor: 0
 --- !u!114 &8966418441031575846
 MonoBehaviour:
   m_ObjectHideFlags: 0
