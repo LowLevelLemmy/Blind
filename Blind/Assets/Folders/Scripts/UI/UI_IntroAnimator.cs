@@ -21,7 +21,11 @@ public class UI_IntroAnimator : MonoBehaviour
         intialPos = roundsUI.position;
         intialScale = roundsUI.localScale;
         if (animOnStart)
-            AnimateIntro1();
+        {
+            DOTween.defaultTimeScaleIndependent = true;
+            DOVirtual.DelayedCall(3f, AnimateIntro1);
+            DOTween.defaultTimeScaleIndependent = false;
+        }
     }
 
     [Button]
@@ -36,6 +40,8 @@ public class UI_IntroAnimator : MonoBehaviour
 
     void AnimateIntro2()
     {
+        // Call director
+        FindObjectOfType<Director>().StartNewRound();   // this is stupid as hell, don't look at this
         DOTween.defaultTimeScaleIndependent = true;
         DOVirtual.DelayedCall(dur2, AnimateIntro3);
         DOTween.defaultTimeScaleIndependent = false;

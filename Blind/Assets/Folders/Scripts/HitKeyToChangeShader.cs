@@ -24,7 +24,6 @@ public class HitKeyToChangeShader : MonoBehaviour
     {
         if (TryGetFeature(out var feature))
         {
-
             var blitFeature = feature as Blit;
             blitFeature.blitPass.blitMaterial = blitFeature.blitPass.blitMaterial == mat1 ? mat2 : mat1;    // don't even look at how ugly this line is
         }

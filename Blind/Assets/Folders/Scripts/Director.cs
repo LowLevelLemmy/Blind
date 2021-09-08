@@ -9,7 +9,6 @@ public class Director : MonoBehaviour
 {
     [Header("SETTINGS:")]
     [SerializeField] float delayAfterKillingLastZom = 2f;
-    [SerializeField] float startingDelay = 8f;
 
     public UnityEvent OnNewRound;
     public List<int> unlockedRoomIndexs = new List<int>();  // used by doors to add room indexes to spawn zombies from
@@ -27,7 +26,6 @@ public class Director : MonoBehaviour
     {
         zomSpawner = GetComponent<ZombieSpawner>();
         zomSpawner.OnZombieRemoved.AddListener(OnZombieRemoved);
-        DOVirtual.DelayedCall(startingDelay, StartNewRound);
     }
 
     void OnZombieRemoved(GameObject zom)
@@ -70,7 +68,7 @@ public class Director : MonoBehaviour
     }
 
     [Button]
-    void StartNewRound()
+    public void StartNewRound()
     {
         ++currentRound;
         OnNewRound?.Invoke();
