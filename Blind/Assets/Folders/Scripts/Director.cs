@@ -8,29 +8,37 @@ using System.Collections.Generic;
 public class Director : MonoBehaviour
 {
     [Header("SETTINGS:")]
-    [SerializeField] int zomsLeftToSpawn;
+    [SerializeField] float delayAfterKillingLastZom = 2f;
+    [SerializeField] float startingDelay = 8f;
+
+    public UnityEvent OnNewRound;
     public List<int> unlockedRoomIndexs = new List<int>();  // used by doors to add room indexes to spawn zombies from
     public int currentRound = 0;
 
-    public UnityEvent OnNewRound;
 
     int maxZombiesAlive => Mathf.CeilToInt(24 * Mathf.Clamp01(.2f * currentRound));
 
-    ZombieSpawner zomSpawner;
 
+    ZombieSpawner zomSpawner;
+    int zomsLeftToSpawn;
     int zombiesAlive => zomSpawner.spawnedZombies.Count;
 
     private void OnEnable()
     {
         zomSpawner = GetComponent<ZombieSpawner>();
         zomSpawner.OnZombieRemoved.AddListener(OnZombieRemoved);
-        DOVirtual.DelayedCall(2, StartNewRound);
+        DOVirtual.DelayedCall(startingDelay, StartNewRound);
     }
 
     void OnZombieRemoved(GameObject zom)
     {
         if (zomSpawner.spawnedZombies.Count == 0 && zomsLeftToSpawn == 0)   // no zombies left
-            StartNewRound();
+        {
+            // TODO: play omonious music here
+            DOTween.defaultTimeScaleIndependent = true;
+            DOVirtual.DelayedCall(delayAfterKillingLastZom, StartNewRound);
+            DOTween.defaultTimeScaleIndependent = false;
+        }
     }
 
     void SpawnZoms()
@@ -64,13 +72,11 @@ public class Director : MonoBehaviour
     [Button]
     void StartNewRound()
     {
-        // TODO: add delay and UI animation here?
         ++currentRound;
         OnNewRound?.Invoke();
         zomsLeftToSpawn = Mathf.CeilToInt(0.15f * currentRound * 24 + 2);
         print("NEW ROUND: " + currentRound + "\tAmmount Of Zoms: " + zomsLeftToSpawn + "\tMax Zombies Allowed: " + maxZombiesAlive);
-        DOVirtual.DelayedCall(5, SpawnZoms);
-        //TODO: figure out the time between rounds in WAW. And enter above!
+        SpawnZoms();
         //TODO: Add sound after last zombie killed.
     }
 }

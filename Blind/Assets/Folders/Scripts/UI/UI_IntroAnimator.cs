@@ -11,6 +11,7 @@ public class UI_IntroAnimator : MonoBehaviour
     [SerializeField] float dur1;
     [SerializeField] float dur2;
     [SerializeField] float dur3;
+    [SerializeField] bool animOnStart;
 
     Vector3 intialPos;
     Vector3 intialScale;
@@ -19,7 +20,8 @@ public class UI_IntroAnimator : MonoBehaviour
     {
         intialPos = roundsUI.position;
         intialScale = roundsUI.localScale;
-        AnimateIntro1();
+        if (animOnStart)
+            AnimateIntro1();
     }
 
     [Button]

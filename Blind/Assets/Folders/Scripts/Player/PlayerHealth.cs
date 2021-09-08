@@ -53,7 +53,7 @@ public class PlayerHealth : MonoBehaviour, IHurtable
         }
     }
 
-    public void OnHurt(GameObject inflicter = null)
+    public void OnHurt(Transform partHit = null, GameObject inflicter = null)
     {
         if (injured)
         {

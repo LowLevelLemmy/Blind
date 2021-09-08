@@ -12,7 +12,7 @@ public class ZombieHealth : MonoBehaviour, IHurtable
         zomCon = GetComponent<ZombieController>();
     }
 
-    public void OnHurt(GameObject inflicter = null)
+    public void OnHurt(Transform partHit = null, GameObject inflicter = null)
     {
         PointsMan.instance.AddPoints(pointsPerKill);
         zomCon.Die();

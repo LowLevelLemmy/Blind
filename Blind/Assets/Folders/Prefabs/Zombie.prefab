@@ -1112,7 +1112,7 @@ GameObject:
   - component: {fileID: 2473089030989108828}
   m_Layer: 9
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: ZombieHead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -2,5 +2,5 @@ using UnityEngine;
 
 public interface IHurtable
 {
-    void OnHurt(GameObject inflicter = null);
+    void OnHurt(Transform partHit = null, GameObject inflicter = null);
 }

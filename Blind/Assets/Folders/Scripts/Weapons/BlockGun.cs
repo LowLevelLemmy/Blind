@@ -24,7 +24,8 @@ public class BlockGun : AbstractWeapon
         {
             if (hit.transform.root.TryGetComponent<IHurtable>(out var hurtable))
             {
-                hurtable.OnHurt();
+                print(hit.transform.name);
+                hurtable.OnHurt(hit.transform);
                 Instantiate(bloodParticles, hit.point, Quaternion.identity);
             }
         }

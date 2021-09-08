@@ -45,7 +45,7 @@ public class ZombieAttack : MonoBehaviour
             if (col.CompareTag("Player"))
             {
                 var hurtable = col.transform.root.GetComponent<IHurtable>();
-                hurtable.OnHurt(gameObject);
+                hurtable.OnHurt(null, gameObject);
                 attacked = true;
             }
 

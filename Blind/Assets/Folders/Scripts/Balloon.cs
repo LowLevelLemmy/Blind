@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Balloon : MonoBehaviour, IHurtable
 {
-    public void OnHurt(GameObject inflicter = null)
+    public void OnHurt(Transform partHit = null, GameObject inflicter = null)
     {
         print("Balloon: OUCH!");
     }
