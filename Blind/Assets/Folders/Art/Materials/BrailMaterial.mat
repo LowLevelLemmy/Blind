@@ -50,7 +50,7 @@ Material:
     - Height: 1080
     - Mul: 0.1
     - Remaping: 0
-    - Res: 50
+    - Res: 80
     - SpriteSheetCount: 6
     - TEMP: 1.77
     - Width: 1920

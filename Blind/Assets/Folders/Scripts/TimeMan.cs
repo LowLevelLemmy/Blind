@@ -16,6 +16,7 @@ public class TimeMan : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = minTime;
         pauseMenu = FindObjectOfType<UI_PauseMenu>();   // it's stupid... but it's working
         plrMov = FindObjectOfType<PlayerMovement>();
         FindObjectOfType<PlayerHealth>().OnPlayerDied.AddListener(OnDeath);
