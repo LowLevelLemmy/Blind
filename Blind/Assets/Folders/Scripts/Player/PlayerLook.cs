@@ -10,6 +10,9 @@ public class PlayerLook : MonoBehaviour
 
     void Start()
     {
+        camRotSpeed = PlayerPrefs.GetFloat("mSens", 1.2f);
+        if (camRotSpeed == 0)   // I'm being throrough cuz I don't have another PC to test on.
+            camRotSpeed = 1.2f;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         plrCon = GetComponent<PlayerController>();

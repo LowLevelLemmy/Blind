@@ -15,14 +15,19 @@ public class PlayerInput : MonoBehaviour
     public bool jump;
 
     IControlable con;   // short for controller :)
+    UI_PauseMenu pauseMenu;
 
     void OnEnable()
     {
+        pauseMenu = FindObjectOfType<UI_PauseMenu>();
         con = GetComponent<IControlable>();
     }
 
     void Update()
     {
+        if (pauseMenu.paused)
+            return;
+
         con.SetInputs(move, lookDelta, fire, altFire, use, jump, altUse);
     }
 
@@ -33,6 +38,8 @@ public class PlayerInput : MonoBehaviour
         use = false;
         jump = false;
         altUse = false;
+        lookDelta = Vector2.zero;
+        con.SetInputs(move, lookDelta, fire, altFire, use, jump, altUse);
     }
 
     void OnMove(InputValue context)

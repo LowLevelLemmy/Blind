@@ -11,13 +11,19 @@ public class TimeMan : MonoBehaviour
     float targetTimeScale;
     float timescal;
 
+    UI_PauseMenu pauseMenu;
+
     void Start()
     {
+        pauseMenu = FindObjectOfType<UI_PauseMenu>();   // it's stupid... but it's working
         plrMov = FindObjectOfType<PlayerMovement>();
     }
 
     void Update()
     {
+        if (pauseMenu.paused)
+            return;
+
         targetTimeScale = plrMov.moveFactor;
         targetTimeScale = targetTimeScale.Remap(0, 1, minTime, maxTime);
         timescal = Mathf.Lerp(Time.timeScale, targetTimeScale, timeDampen * Time.deltaTime);
