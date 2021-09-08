@@ -24,7 +24,7 @@ public class Director : MonoBehaviour
     {
         zomSpawner = GetComponent<ZombieSpawner>();
         zomSpawner.OnZombieRemoved.AddListener(OnZombieRemoved);
-        DOVirtual.DelayedCall(1, StartNewRound);
+        DOVirtual.DelayedCall(2, StartNewRound);
     }
 
     void OnZombieRemoved(GameObject zom)
@@ -64,10 +64,13 @@ public class Director : MonoBehaviour
     [Button]
     void StartNewRound()
     {
+        // TODO: add delay and UI animation here?
         ++currentRound;
         OnNewRound?.Invoke();
         zomsLeftToSpawn = Mathf.CeilToInt(0.15f * currentRound * 24 + 2);
         print("NEW ROUND: " + currentRound + "\tAmmount Of Zoms: " + zomsLeftToSpawn + "\tMax Zombies Allowed: " + maxZombiesAlive);
         DOVirtual.DelayedCall(5, SpawnZoms);
+        //TODO: figure out the time between rounds in WAW. And enter above!
+        //TODO: Add sound after last zombie killed.
     }
 }
