@@ -42,9 +42,9 @@ Material:
     m_Ints: []
     m_Floats:
     - Contrast: 1
-    - Height: 1080
+    - Height: 1920
     - Res: 70
     - SpriteSheetCount: 50
-    - Width: 1920
+    - Width: 1080
     m_Colors: []
   m_BuildTextureStacks: []

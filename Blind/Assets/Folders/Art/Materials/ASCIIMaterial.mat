@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - ASCIISpriteSheet:
-        m_Texture: {fileID: 2800000, guid: ea561b72800825347a62e663a096130f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 68fafdc1c187e714393068701cfc438e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -41,12 +41,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - ALPHA: 0
     - Contrast: 1
-    - Height: 1080
+    - Height: 1920
     - Remaping: 0
-    - Res: 70
-    - SpriteSheetCount: 93
-    - Width: 1920
+    - Res: 50
+    - Saturation: 3.6
+    - SpriteSheetCount: 10
+    - TextContrast: 1
+    - Width: 1080
     - mul: 0
     m_Colors: []
   m_BuildTextureStacks: []
